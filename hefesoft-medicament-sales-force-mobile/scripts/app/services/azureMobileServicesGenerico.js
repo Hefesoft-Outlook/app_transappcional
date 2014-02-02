@@ -11,7 +11,7 @@ define(["kendo", "azure", "q"],
      var client = new WindowsAzure.MobileServiceClient('https://hefesoft-medicament-sales-force.azure-mobile.net/', 'KPtpYTfuLvrhWBkSCcxADFVOmUNleG14');
 
 
-     azureMobileClient.getDataFilterskip = function (tableName, data, numberRows, skipNumber, sort) {
+     azureMobileClient.getDataFilterskip = function (tableName, data, numberRows, skipNumber, sort, customParameter) {
 
          var todoItemTable = client.getTable(tableName).includeTotalCount().skip(skipNumber).take(numberRows);
          var query = todoItemTable;
@@ -40,7 +40,14 @@ define(["kendo", "azure", "q"],
              }
          }
 
-         return query.read();
+         if (customParameter === undefined) {
+             return query.read();
+         } else {
+             return query.read(customParameter);
+         }
+
+
+         
      };
 
      azureMobileClient.updateDataAsync = function (tableName, data) {

@@ -29,11 +29,12 @@ define([
                  $("#endless-scrolling").kendoMobileListView({
                      dataSource: dataContextPanelVisitador.dataSourcePanelVisitador,
                      template: $("#visitas-no-planeadas-template").text(),
-                     //filterable: {
-                     //    field: "nombre",
-                     //    operator: "startswith"
-                     //},
-                     endlessScroll: true,
+                     filterable: {
+                         field: "nombre",
+                         operator: "startswith",
+                         autoFilter: false
+                     },
+                     //endlessScroll: true,
                      click: function (e) {
                          item = e.dataItem;
                      }
