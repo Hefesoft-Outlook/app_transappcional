@@ -10,8 +10,12 @@
             <div class="position-left">
                 <span class="weather-info date">${nombre}</span>
             </div>
-            <div class="position-right">
-                <a data-role="button" data-click="app.registroVisitasNoPlanedas.viewModel.contactoNoPlaneado.onClick" class="registrarBoton">Opciones</a>
+            <div class="position-right">                
+                <a data-role="button" data-click="app.registroVisitasNoPlanedas.viewModel.onClick" data-id="#= id #" class="registrarBoton">Opciones</a>
+                <br />
+                <div style="float:right">
+                    <span>${contactosCiclo}</span> de <span>${contactosPendientes}</span>
+                </div>
             </div>
         </div>
     </script>   

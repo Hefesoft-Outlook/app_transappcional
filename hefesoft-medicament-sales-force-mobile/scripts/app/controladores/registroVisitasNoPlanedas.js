@@ -12,14 +12,13 @@ define([
      fecha.mesfecha = fecha.getMonth() + 1;
      fecha.diafecha = fecha.getDate();
      var titulo = "Visitas para el dia" + " " + fecha.aniofecha + " " + fecha.mesfecha + " " + fecha.diafecha;
-     var item;     
+     var item;
+     var myVar;
      
      var contactoNoPlaneado = kendo.observable({
          activarRealizarVisita: false,
-         nombreRealizarVisita: "Realizar visita",
-         onClick: botonOpciones,
-         registrarVisita: registrarVisita,
-        
+         nombreRealizarVisita: "Realizar visita",         
+         registrarVisita: registrarVisita,        
      });
      
      
@@ -34,14 +33,12 @@ define([
                          operator: "startswith",
                          autoFilter: false
                      },
-                     //endlessScroll: true,
-                     click: function (e) {
-                         item = e.dataItem;
-                     }
+                     //endlessScroll: true,                     
                  });
              },            
              contactoNoPlaneado: contactoNoPlaneado,
-             titulo: titulo
+             titulo: titulo,
+             onClick: botonOpciones
          }
      }
 
@@ -49,7 +46,7 @@ define([
      function registrarVisita (e) {
          window.kendoApp.showLoading();
          if (item.contactoRealizado === undefined || item.contactoRealizado === null) {
-             $.when(insertarTmVisita()).done(
+             $.when(insertarTmVisita(), updateTmPanel()).done(
                     function () {
                         window.kendoApp.hideLoading();
                     }
@@ -71,9 +68,34 @@ define([
         return deferred.promise;
      }
 
-     function botonOpciones(e) {         
-         $("#actionSheetVisitasNoPlaneadasText").text("Realizar visita no programadas");
-         $("#actionsheetVisitasNoPlaneadas").data("kendoMobileActionSheet").open();
+     function updateTmPanel() {
+         var deferred = Q.defer();
+         item.datosExtra = JSON.stringify(item);
+         item.contactosPendientes = item.contactosPendientes + 1;
+         dataContextPanelVisitador.dataSourcePanelVisitador.updateField({ keyField: 'id', keyValue: item.id, updateField: 'contactosPendientes', updateValue: item.contactosPendientes });
+         azureMobileServicesGenerico.azureMobileClient.updateDataAsync("TM_Panel_Visitador", item).then(
+             function (result) {                 
+                 $("#endless-scrolling").data("kendoMobileListView").refresh();                 
+                 deferred.resolve(result);
+             }
+         );
+         return deferred.promise;
      }
-     
+
+     function botonOpciones(e) {
+         var id = e.button.data().id;
+         item = dataContextPanelVisitador.dataSourcePanelVisitador.get(id);
+
+         if (item.contactosPendientes < item.contactosCiclo) {
+
+             $("#actionSheetVisitasNoPlaneadasBtn").show();
+             $("#actionSheetVisitasNoPlaneadasText").text("Realizar visita no programadas");
+             $("#actionsheetVisitasNoPlaneadas").data("kendoMobileActionSheet").open();
+         }
+         else {
+             $("#actionSheetVisitasNoPlaneadasBtn").hide();
+             $("#actionSheetVisitasNoPlaneadasText").text("Contactos superados");
+             $("#actionsheetVisitasNoPlaneadas").data("kendoMobileActionSheet").open();
+         }
+     }
  });
