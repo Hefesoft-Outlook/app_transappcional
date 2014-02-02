@@ -1,0 +1,48 @@
+   
+    <div data-role="view"
+     data-model="app.registroVisitas.viewModel"
+     data-init="app.registroVisitas.viewModel.loaded"
+     data-title="Registro visitas"
+     data-layout="tabstrip-layout">
+
+
+
+    <script type="text/x-kendo-tmpl" id="weather-forecast-template">
+        <div>
+            <div class="position-left">
+                <span class="weather-info date">${nombre}</span>
+            </div>
+            <div class="position-right">
+                <a data-role="button" data-bind="events: { click: contactoRealizado.onClick }" class="registrarBoton">Opciones</a>                
+            </div>
+        </div>
+    </script>
+
+    <div class="weather">
+        <p class="weather-title" data-bind="text: titulo"></p>
+
+        <div class="separator">
+            <div class="dark"></div>
+            <div class="light"></div>
+        </div>
+
+        <ul class="forecast-list"
+            data-role="listview"
+            data-bind="source: dataSource"
+            data-template="weather-forecast-template"></ul>
+    </div>
+
+
+
+        <ul id="actionsheet" data-role="actionsheet" data-cancel="Close">
+            <li>
+                <a id="actionSheetRegistrarVisitaBtn" data-role="button" data-bind="events: { click: contactoRealizado.registrarVisita }">
+                    <p id="actionSheetRegistrarVisitaText"></p>
+                </a>
+            </li>
+        </ul>
+
+</div>
+
+    
+   
