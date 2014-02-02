@@ -1,0 +1,44 @@
+   
+    <div data-role="view"
+     data-model="app.registroVisitasNoPlanedas.viewModel"
+     data-init="app.registroVisitasNoPlanedas.viewModel.loaded"
+     data-title="Registro visitas no planeadas"
+     data-layout="tabstrip-layout">
+
+    <script type="text/x-kendo-tmpl" id="visitas-no-planeadas-template">
+        <div>
+            <div class="position-left">
+                <span class="weather-info date">${nombre}</span>
+            </div>
+            <div class="position-right">
+                <a data-role="button" data-click="app.registroVisitasNoPlanedas.viewModel.contactoNoPlaneado.onClick" class="registrarBoton">Opciones</a>
+            </div>
+        </div>
+    </script>   
+
+    <div class="weather">
+        <p class="weather-title" data-bind="text: titulo"></p>
+        <div class="separator">
+            <div class="dark"></div>
+            <div class="light"></div>
+        </div>        
+        
+        <ul id="endless-scrolling"></ul>
+
+        <script>
+            
+        </script>
+
+    </div>
+
+    <ul id="actionsheetVisitasNoPlaneadas" data-role="actionsheet" data-cancel="Close">
+        <li>
+            <a id="actionSheetVisitasNoPlaneadasBtn" data-role="button" data-click="app.registroVisitasNoPlanedas.viewModel.contactoNoPlaneado.registrarVisita">
+                <p id="actionSheetVisitasNoPlaneadasText"></p>
+            </a>
+        </li>
+    </ul>
+</div>
+
+    
+   

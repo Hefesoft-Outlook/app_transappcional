@@ -1,8 +1,8 @@
 require.config({
     paths: {
         jQuery: "libs/jquery.min",
-        kendo: "libs/kendo.mobile.min",
-        //kendo: "libs/kendo.all.min",
+        //kendo: "libs/kendo.mobile.min",
+        kendo: "libs/kendo.all.min",
         azure : "libs/MobileServices.Web-1.1.0.min",
         q : "libs/q"
     },

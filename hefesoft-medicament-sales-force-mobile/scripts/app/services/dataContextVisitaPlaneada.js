@@ -3,6 +3,8 @@ define(["kendo", "azure", "q"],
  function (kendo, azure, Q) {
 
      var dataSource = new kendo.data.DataSource({
+         pageSize: 100,
+         serverPaging: true,
          transport: {
              read: function (options) {
                  dataSourceRead(options);

@@ -74,6 +74,7 @@
     <Content Include="scripts\app\controladores\login.js">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="scripts\app\controladores\registroVisitasNoPlanedas.js" />
     <Content Include="scripts\app\controladores\registroVisitas.js">
       <SubType>Content</SubType>
     </Content>
@@ -82,7 +83,9 @@
     </Content>
     <Content Include="scripts\app\services\azureMobileServicesGenerico.js" />
     <Content Include="scripts\app\services\dataContextAutenticacion.js" />
+    <Content Include="scripts\app\services\dataContextPanelVisitador.js" />
     <Content Include="scripts\app\services\dataContextVisitaPlaneada.js" />
+    <Content Include="scripts\app\vistas\registroVisitasNoPlaneadas.html" />
     <Content Include="scripts\app\vistas\registroVisitas.html">
       <SubType>Content</SubType>
     </Content>
