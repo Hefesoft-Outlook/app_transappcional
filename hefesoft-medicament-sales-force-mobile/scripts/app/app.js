@@ -4,11 +4,9 @@ define([
 "azure", 
 "q",
 "app/controladores/utils",
-"app/controladores/login",
-"app/controladores/registroVisitas",
-"app/controladores/registroVisitasNoPlanedas"
+"app/controladores/login"
 ], 
-function ($, kendo, azure, q, utils, login_view, registroVisitas, registroVisitasNoPlanedas) {
+function ($, kendo, azure, q, utils, login_view) {
         var global = window;
         var mobileSkin = "",
             app = global.app = global.app || {};
@@ -24,13 +22,12 @@ function ($, kendo, azure, q, utils, login_view, registroVisitas, registroVisita
 
         var init = function () {
             window.onerror = _onError;
-
-            window.kendoApp = new kendo.mobile.Application(document.body, { layout: "tabstrip-layout" });
-            window.ciclo = 'D43B7F8D-DB0D-4784-92AC-F62DB01B6041';
-            window.azureCliente = new WindowsAzure.MobileServiceClient('https://hefesoft-medicament-sales-force.azure-mobile.net/', 'KPtpYTfuLvrhWBkSCcxADFVOmUNleG14');
-
-            window.convertirDatosExtra = convertirDatosExtra;
-            window.mapearNombres = convertirDatosExtra;
+			
+            //Variables globales
+            //window.kendoApp = new kendo.mobile.Application(document.body, { layout: "tabstrip-layout" });
+            
+            //window.convertirDatosExtra = convertirDatosExtra;
+            //window.mapearNombres = convertirDatosExtra;
             
             app.changeSkin = function (e) {
                 if (e.sender.element.text() === "Flat") {
@@ -51,9 +48,7 @@ function ($, kendo, azure, q, utils, login_view, registroVisitas, registroVisita
 
         return {
             init: init,
-            login_view: login_view,            
-            registroVisitas: registroVisitas,
-            registroVisitasNoPlanedas: registroVisitasNoPlanedas
+            login_view: login_view  
         };
 
         function convertirDatosExtra(resultado) {

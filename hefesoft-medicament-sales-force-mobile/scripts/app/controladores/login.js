@@ -22,7 +22,7 @@ define([
                              if (result.length > 0) {
                                  window.usuarioLogueado = result[0];                                 
 
-                                 $("#iconRegistrarVisita").css("visibility", "visible");
+                                 /*$("#iconRegistrarVisita").css("visibility", "visible");
                                  $("#iconVisitaNoPlaneada").css("visibility", "visible");
 
                                  $('#iconLogin').on("click", function () {
@@ -35,7 +35,7 @@ define([
 
                                  $('#iconVisitaNoPlaneada').on("click", function () {
                                      window.kendoApp.navigate("scripts/app/vistas/registroVisitasNoPlaneadas.html");
-                                 })
+                                 })*/
                              }
                              else {
                                  $("#iconRegistrarVisita").css("visibility", "hidden");
