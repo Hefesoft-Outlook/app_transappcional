@@ -24,7 +24,7 @@ function ($, kendo, azure, q, utils, login_view) {
             window.onerror = _onError;
 			
             //Variables globales
-            //window.kendoApp = new kendo.mobile.Application(document.body, { layout: "tabstrip-layout" });
+            window.kendoApp = new kendo.mobile.Application(document.body, { layout: "tabstrip-layout" });
             
             //window.convertirDatosExtra = convertirDatosExtra;
             //window.mapearNombres = convertirDatosExtra;
