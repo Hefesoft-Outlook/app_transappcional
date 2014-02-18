@@ -4,9 +4,10 @@ define([
 "azure", 
 "q",
 "app/controladores/utils",
-"app/controladores/login"
+"app/controladores/login",
+"app/controladores/recaudoReferenciado",    
 ], 
-function ($, kendo, azure, q, utils, login_view) {
+function ($, kendo, azure, q, utils, login_view, recaudoReferenciado) {
         var global = window;
         var mobileSkin = "",
             app = global.app = global.app || {};
@@ -48,7 +49,8 @@ function ($, kendo, azure, q, utils, login_view) {
 
         return {
             init: init,
-            login_view: login_view  
+            login_view: login_view,
+            recaudoReferenciado : recaudoReferenciado
         };
 
         function convertirDatosExtra(resultado) {

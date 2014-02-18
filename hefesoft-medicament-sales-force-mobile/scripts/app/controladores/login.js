@@ -12,8 +12,19 @@ define([
                  
              },
              login: function login() {
-                 window.kendoApp.showLoading();
                  var login = app.login_view.viewModel;
+                 
+                 
+                 $("#iconRecaudoReferenciado").css("visibility", "visible");
+                 
+                 
+                 $('#iconRecaudoReferenciado').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/recaudoReferenciado.html");
+                 })
+                 
+                 
+                 
+                 /*window.kendoApp.showLoading();                 
                  dataContextAutenticacion.login({ email: login.Usuario_Entidad.usuario, clave: login.Usuario_Entidad.password }).then(
                          function (result) {
 
@@ -35,14 +46,14 @@ define([
 
                                  $('#iconVisitaNoPlaneada').on("click", function () {
                                      window.kendoApp.navigate("scripts/app/vistas/registroVisitasNoPlaneadas.html");
-                                 })*/
+                                 })
                              }
                              else {
                                  $("#iconRegistrarVisita").css("visibility", "hidden");
                                  $("#iconVisitaNoPlaneada").css("visibility", "hidden");
                              }
                          }
-                     );
+                     );*/
                  
              },
              registrarVisitaPlaneada : function(){
