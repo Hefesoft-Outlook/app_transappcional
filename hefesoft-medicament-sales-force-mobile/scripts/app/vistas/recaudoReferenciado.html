@@ -1,0 +1,128 @@
+   
+<div data-role="view"
+     data-model="app.recaudoReferenciado.viewModel"
+     data-init="app.recaudoReferenciado.viewModel.loaded"
+     data-title="Recaudo referenciado"
+     data-layout="tabstrip-layout">
+
+
+    <div class="titanic_a">&nbsp;</div>
+
+    <h2>Definicion</h2>
+    
+    <p>
+        Es un producto mediante el cual ofrecemos a nuestros clientes actuales y potenciales, la red de oficinas del Banco y el Canal AzulNet, para el recaudo de su flujo de efectivo, permitiéndole concentrar su cartera en una sola cuenta. Cada convenio de recaudo se identifica con un código de recaudo. 
+    </p>
+    
+    <h2>Caracteristicas</h2>
+    
+    <h3>Cuenta de Recaudo</h3>    
+    
+    <div data-role="scroller" class="scroller-content">
+        
+        <ul>
+            <li>
+        		<p>
+           			Todo convenio de recaudo debe tener asociada una cuenta de recaudo que podrá, a petición del cliente, tener restricción para que sea de uso exclusivo de los recaudos sujeto del convenio, permitiendo tener un mayor control de los abonos.
+        		</p>    
+            </li>
+            
+            <li>
+        		<p>
+           			La cuenta podrá ser de ahorros o corriente. Sin embargo, dada la naturaleza de las cuentas corrientes, siempre será mejor para los clientes contar con sus ventajas: sobregiro y cupo plus.
+        		</p>    
+            </li>
+            
+        </ul>
+    </div>
+  
+    <h3>Codigo de recaudo</h3>
+
+    <div data-role="scroller" class="scroller-content">
+        <p>
+            Como complemento a la cuenta de recaudo, cada uno de los convenios se identificará con un código de recaudo, con las siguientes características: 
+        </p>
+
+        <ul>
+            <li>
+            	<p>
+                    Los códigos de recaudo son asignados por el banco y no pueden ser modificados por el cliente.
+                </p>
+            </li>
+            
+            <li>
+            	<p>
+                 Los códigos de recaudo siempre son de 4 dígitos.
+                </p>
+            </li>
+            
+            <li>
+            	<p>
+                 El cliente puede definir N códigos de recaudo que estén asociados a una misma cuenta, lo que le permitirá unificar en una sola cuenta los diferentes tipos de recaudo conforme a sus líneas de negocio y garantizar un mejor control de los abonos.
+                </p>
+            </li>
+            
+            <li>
+            	<p>
+                 La creación de códigos puede ser dinámica, quiere decir esto que si el cliente genera en su giro normal de negocio nuevas líneas que requieran ser identificadas, se podrá solicitar crear nuevos códigos de recaudo.
+                </p>
+            </li>
+        </ul>
+       
+    </div>
+
+<style scoped>
+    .titanic_a, .titanic_b, .titanic_c {
+        display: block;
+        height: 230px;
+        background: url(http://www.transappcional.com.co/sites/default/files/recaudo_0.jpg) no-repeat center center;
+        -webkit-background-size: 100% auto;
+        background-size: 100% auto;
+    }
+
+    .titanic_b {
+        background: url(../../content/mobile/shared/titanic2.jpg) no-repeat center center;
+    }
+    
+    .titanic_c {
+        background: url(../../content/mobile/shared/titanic3.jpg) no-repeat center center;
+    }
+
+    #scroller-view h2{
+        margin: 15px 10px 0 10px;
+    }
+
+    #scroller-view img {
+        -webkit-transform: translatez(0);
+    }
+
+    #scroller-view .scroller-content {
+        font-weight: normal;
+        height: 130px;
+        margin: 15px 0;
+        background-color: rgba(0, 0, 0, 0.07);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.45) inset;
+    }
+    
+    .km-ios #scroller-view .km-navbar {
+        background: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0, rgba(255, 255, 255, 0.5)), color-stop(0.06, rgba(255, 255, 255, 0.45)), color-stop(0.5, rgba(255, 255, 255, 0.2)), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(1, rgba(100, 100, 100, 0))), url(../../content/shared/images/patterns/pattern9.png);
+        background: -moz-linear-gradient(center top , rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.45) 6%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(100, 100, 100, 0)), url(../../content/shared/images/patterns/pattern9.png);
+	}
+	.km-tablet .km-ios #scroller-view .km-view-title {
+        color: #fff;
+        text-shadow: 0 -1px rgba(0,0,0,.5);
+    }
+    
+    .km-ios #scroller-view .km-navbar .km-button {
+        background-color: rgba(0,0,0,0.2);
+    }
+</style>
+    
+</div>
+
+
+    
+
+
+    
+   
