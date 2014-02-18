@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+    <link href="styles/main.css" rel="stylesheet" />
+
+    <script src="cordova.js"></script>
+    <script data-main="scripts/main" src="scripts/libs/require.js"></script>
+
+</head>
+<body>    
+
+    <div data-role="drawer" id="my-drawer" data-swipe-to-open="false" data-layout="tabstrip-layout">
+        
+        <ul data-role="listview" data-type="group">
+        <li>Mailbox
+            <ul>
+                <li data-icon="inbox"><a href="#drawer-home" data-transition="none">Inbox</a></li>
+                <li data-icon="star"><a href="#drawer-starred" data-transition="none">Starred Items</a></li>
+                <li data-icon="compose"><a href="#drawer-drafts" data-transition="none">Drafts</a></li>
+                <li data-icon="sent"><a href="#drawer-sent" data-transition="none">Sent Items</a></li>
+                <li data-icon="trash"><a href="#drawer-deleted" data-transition="none">Deleted Items</a></li>
+                <li data-icon="spam"><a href="#drawer-spam" data-transition="none">Spam</a></li>
+            </ul>
+        </li>
+        <li>Tasks
+            <ul>
+                <li>To Do</li>
+                <li>In Progress</li>
+                <li>Done</li>
+                <li>High Priority</li>
+                <li>Low Priority</li>
+            </ul>
+        </li>
+        <li>Account
+            <ul>
+                <li data-icon="settings">Settings</li>
+                <li data-icon="off">Log Out</li>
+            </ul>
+        </li>
+    </ul>
+        
+        <style>
+        .km-ios #my-drawer .km-content, .km-android #my-drawer .km-content, .km-blackberry #my-drawer .km-content,
+        .km-ios #my-drawer .km-list > li, .km-android #my-drawer .km-list > li, .km-blackberry #my-drawer .km-list > li,
+        .km-ios #my-drawer .km-listview-link > .km-icon, .km-android #my-drawer .km-listview-link > .km-icon, .km-blackberry #my-drawer .km-listview-link > .km-icon,
+        .km-ios #my-drawer .km-list li > .km-icon, .km-android #my-drawer .km-list li > .km-icon, .km-blackberry #my-drawer .km-list li > .km-icon
+        {
+            background-color: #4e4e4e;
+            color: #fff;
+        }
+    
+        .km-ios #my-drawer .km-group-title,
+        .km-blackberry #my-drawer .km-group-title
+        {
+            background-color: #6e6e6e;
+            color: #fff;
+        }
+    
+        .km-drawer-button:before, .km-drawer-button:after  { content: "\E077"; }
+        .km-inbox:before, .km-inbox:after { content: "\E0B0"; }
+        .km-sent:before, .km-sent:after { content: "\E0C6"; }
+        .km-trash:before, .km-trash:after { content: "\E0C3"; }
+        .km-spam:before, .km-spam:after { content: "\E0C5"; }
+        .km-star:before, .km-star:after { content: "\E0D7"; }
+        .km-settings:before, .km-settings:after { content: "\E0DA"; }
+        .km-off:before, .km-off:after { content: "\E0B9"; }
+    
+        .inboxList
+        {
+            font-size: .8em;
+        }
+    
+        .inboxList p,
+        .inboxList h2,
+        .inboxList h3
+        {
+            margin: 5px 2px;
+        }
+    
+        .inboxList p,
+        .inboxList h3
+        {
+            color: #777;
+        }
+    
+        .inboxList h3.time
+        {
+            color: #369;
+            float: left;
+            margin-right: 10px;
+        }
+    </style>
+        
+        
+    </div>
+
+
+    <!--Login-->
+    <div id="tabstrip-login"
+         data-layout="tabstrip-layout"
+         data-role="view" data-model="app.login_view.viewModel" data-init="app.login_view.viewModel.loaded"
+         data-title="Login">
+        <div class="view-content">
+            <div class="logo"></div>
+
+            <h3 data-bind="invisible: isLoggedIn">Enter your credentials:</h3>
+            <h1 class="welcome" data-bind="visible: isLoggedIn">
+                Welcome, <span data-bind="text: username"></span>!
+            </h1>
+            <div class="buttonArea">
+                <input type="submit" id="logout" data-role="button" data-bind="click: onLogout, visible: isLoggedIn" class="login-button" value="Logout" />
+            </div>
+            <form>
+                <ul data-role="listview" data-style="inset">
+                    <li>
+                        <label>
+                            Username
+                            <input type="text" data-bind="value: Usuario_Entidad.usuario" />
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            Password
+                            <input type="password" data-bind="value: Usuario_Entidad.password" />
+                        </label>
+                    </li>
+                </ul>
+                <div class="buttonArea">
+                    <input type="submit" id="login" data-role="button" data-click="app.login_view.viewModel.login" class="login-button" value="Login" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+   
+
+    <div data-role="layout" data-id="tabstrip-layout">
+        <!--Header-->
+        <div data-role="header">            
+            <div data-role="navbar">                
+                <a data-role="button" data-rel="drawer" href="#my-drawer" data-icon="drawer-button" data-align="left"></a>
+                <span data-role="view-title"></span>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <div data-role="footer">
+            <div data-role="tabstrip">
+                <a id="iconLogin" data-icon="contacts">Login</a>
+                <a id="iconRecaudoReferenciado"  style="visibility:hidden" data-icon="add">Recaudo referenciado</a>                
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
