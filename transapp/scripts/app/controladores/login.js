@@ -8,19 +8,24 @@ define([
 
      return {
          viewModel: {
-             loaded: function loaded() {
-                 
-             },
-             login: function login() {
-                 var login = app.login_view.viewModel;
-                 
-                 
-                 $("#iconRecaudoReferenciado").css("visibility", "visible");
-                 
-                 
-                 $('#iconRecaudoReferenciado').on("click", function () {
+             loaded: function loaded() {                 
+                  $('#recaudo-definicion').on("click", function () {
                      window.kendoApp.navigate("scripts/app/vistas/recaudoReferenciado.html");
                  })
+                  
+                  $('#recaudo-modalidades').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/recaudoModalidades.html");
+                 })
+                  
+                  $('#recaudo-argumentos').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/recaudoArgumentos.html");
+                 })
+             },
+             login: function login() {
+                 var login = app.login_view.viewModel;                
+                 
+                 
+                
                  
                  
                  
