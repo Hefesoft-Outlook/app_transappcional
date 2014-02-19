@@ -20,6 +20,12 @@ define([
                   $('#recaudo-argumentos').on("click", function () {
                      window.kendoApp.navigate("scripts/app/vistas/recaudoArgumentos.html");
                  })
+                  
+                 $('#recaudo-implementacion').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/recaudoFuncionamiento.html");
+                 })
+                  
+                  
              },
              login: function login() {
                  var login = app.login_view.viewModel;                

@@ -1,0 +1,199 @@
+   
+<div data-role="view"    
+     data-title="Modalidades"
+     data-layout="tabstrip-layout">
+
+    <h2>
+        Funcionamiento e Implementación
+    </h2>
+
+    <ul data-role="listview" data-type="group">
+         <li>Recaudo referenciado
+             	<ul>                    
+                    <li><a href="#recaudo-modalidades-con-codigo-barras-funcionamiento" data-transition="none">Con codigo de barras</a></li>
+                    <li><a href="#recaudo-modalidades-sin-codigo-barras-funcionamiento" data-transition="none">Sin codigo de barras</a></li>                    
+                 </ul>
+        </li>
+        <li>Recaudo electronico
+             	<ul>                    
+                    <li><a href="#recaudo-modalidades-recaudo-linea-funcionamiento" data-transition="none">Recaudo en linea y Domicialiacion </a></li>                    
+                 </ul>
+         </li>
+    </ul>   
+   
+    
+    <style>
+    .km-ios  .km-content {
+        background: url(../../content/shared/images/patterns/pattern2.png);
+        box-shadow: inset 0 0 30px #95764D;
+        -webkit-box-shadow: inset 0 0 30px #95764D;
+    }
+    .km-ios  .km-listview .km-list {
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        box-shadow: 0 1px 5px #95764D;
+        -webkit-box-shadow: 0 1px 5px #95764D;
+    }
+    .km-ios  .km-listview .km-list > li {
+        border: none;
+    }
+    .km-ios  .km-listview .km-list > li:last-child {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    .km-ios  .km-navbar {
+        background: url(../../content/shared/images/patterns/pattern9.png);
+    }
+    .km-tablet .km-ios  .km-view-title {
+        color: #fff;
+        text-shadow: 0 -1px rgba(0,0,0,.5);
+    }
+    .km-ios  .km-navbar .km-button
+    {
+        background-color: #974d2e;
+    }
+
+</style>
+    
+</div>
+
+<div 
+     id="recaudo-modalidades-con-codigo-barras-funcionamiento"
+     data-role="view"    
+     data-title="Con Código de Barras"
+     data-layout="tabstrip-layout">
+
+
+    <h2>
+        Con Código de Barras
+    </h2>
+    
+    <h3>
+        Dia 1
+    </h3>
+    
+    <div>
+    <ol><li>El Gerente de Cuenta o Cash recibe facturas o tarjetas de recaudos por parte del cliente.</li>
+    <li>La persona autorizada en el Centro Empresarial realiza la solicitud de la prueba a la UPT a través del Work Flow de Speedy.</li>
+    <li>Se envían las facturas o tarjetas físicas a la UPT para realizar la prueba.</li>
+    </ol></div>
+    
+    <h3>
+        Dia 2
+    </h3>
+
+    <div>
+    <div>4. La UPT recibe las facturas o tarjetas para la realiza la prueba.</div>
+    <div>5. El analista de la UPT realiza la prueba del código de barras.</div>
+    <ul><li><span style="font-size:14px">Lectura</span></li>
+    <li><span style="font-size:14px">Estructura</span></li>
+    <li><span style="font-size:14px">Datos</span></li>
+    </ul><div>6. La UPT envía resultado de la prueba al solicitante a través del Work Flow de Speedy.</div>
+    <div>&nbsp;</div>
+    <div>- Después de confirmadas las pruebas, el Gerente Comercial o Cash realiza el proceso de solicitud de creación del recaudo o de parametrización del código de barras si el recaudo ya esta en funcionamiento.</div>
+    <div>&nbsp;</div>
+    <div>- A partir de esta solicitud se tendrán en cuenta los mismos tiempos definidos para la creación de un recaudo.</div></div>
+    
+    
+    <p>*El proceso de prueba de un código de barras se realiza en un periodo máximo de 1 día hábil después de que la UPT recibe las facturas físicas.</p>
+    
+    <p>*Después de realizadas las pruebas, la implementación se realiza en un periodo máximo de 4 días hábiles.</p>
+        
+</div>
+
+
+<div 
+     id="recaudo-modalidades-sin-codigo-barras-funcionamiento"
+     data-role="view"    
+     data-title="Sin Código de Barras"
+     data-layout="tabstrip-layout">
+
+
+    <h2>
+        Sin Código de Barras
+    </h2>
+    
+    <h3>
+        Dia 1
+    </h3>
+    
+   <div>
+    <ol><li>El Gerente de Cuenta o Cash recibe el formato del Convenio de Recaudo totalmente diligenciado y firmado con la Cámara de Comercio y la fotocopia de la cedula del representante legal.</li>
+    <li>La persona autorizada en el Centro Empresarial realiza la solicitud de creación a la UPT a través del Work Flow de Speedy.</li>
+    <li>La UPT realiza la validación de la documentación.</li>
+    <li>La UPT realiza la solicitud de creación en los diferentes sistemas del Banco:</li>
+    </ol><ul><li><span style="font-size:14px">Altaír</span></li>
+    <li><span style="font-size:14px">Finesse *</span></li>
+    <li><span style="font-size:14px">Azulnet</span></li>
+    </ul></div>
+    
+    <h3>
+        Dia 2
+    </h3>
+
+    <div>
+    <p>5. La UPT recibe confirmación de la creación del recaudo en los sistemas del Banco.</p>
+    <p>6. La UPT confirma la creación del recaudo a:</p>
+    <ul><li><span style="font-size:14px">Solicitante</span></li>
+    <li><span style="font-size:14px">Servicio a la Red</span></li>
+    <li><span style="font-size:14px">Mesa de Ayuda Operativa</span></li>
+    <li><span style="font-size:14px">Desarrollo de Productos</span></li>
+    </ul><p>7. Gerente de Cuenta o Cash confirmación la creación de recaudo al cliente.</p>
+    <p>8. Servicio a la Red emite comunicado a la Red de Oficinas informando la disponibilidad del nuevo convenio de recaudo.</p></div>
+    
+    
+    <p>*El alta de un convenio de recaudo se realiza en un periodo máximo de 4 días hábiles. Los recaudos se actualizan&nbsp; en el sistema Finesse Red de Oficinas los Martes y Viernes.</p>
+        
+</div>
+
+
+<div 
+     id="recaudo-modalidades-recaudo-linea-funcionamiento"
+     data-role="view"    
+     data-title="Recaudo en Línea y Domiciliación"
+     data-layout="tabstrip-layout">
+
+
+    <h2>
+        Recaudo en Línea y Domiciliación
+    </h2>
+    
+    <h3>
+        Dia 1
+    </h3>
+    
+   <div >
+    <ol><li>Gerente de Cuenta o Cash recibe los archivos y estructuras por parte del cliente.</li>
+    <li>La persona autorizada en el Centro Empresarial realiza la solicitud de la prueba a la UPT a través del Work Flow de Speedy adjuntando:</li>
+    </ol><ul><li><span style="font-size:14px">Lista de chequeo</span></li>
+    <li><span style="font-size:14px">Archivos de facturación</span></li>
+    <li><span style="font-size:14px">Estructura archivos&nbsp;de facturación</span></li>
+    </ul><div>3. La UPT recibe la solicitud y&nbsp; realiza la validación de la lista de chequeo.</div>
+    <div>4. La UPT realiza la solicitud de parametrización del recaudo en los sistemas del Banco.</div>
+    <div>5. La UPT realiza la solicitud de la prueba de acuerdo a los parámetros indicados en la lista de chequeo.</div>
+   </div>
+    
+    <h3>
+        Dia 5
+    </h3>
+
+   <div>
+    <div>
+    <div>6. La UPT válida y certifica el resultado de la prueba de acuerdo a las condiciones solicitadas.</div>
+    <div>7. La UPT envía resultado de la prueba al solicitante a través del Work Flow de Speedy.</div>
+    <div>
+    <div>&nbsp;</div>
+    <div>- Después de confirmadas la pruebas el Gerente Comercial o Cash realiza el proceso de solicitud de creación del recaudo o de parametrización de las bases de datos si el recaudo ya esta en funcionamiento.</div>
+    <div>&nbsp;</div>
+    <div>- A partir de esta solicitud se tendrán en cuenta los mismos tiempos definidos para la creación de un recaudo.</div>
+    </div>
+   </div></div>
+    
+    <p>*El proceso de prueba de una base de datos de facturación se realiza en un periodo máximo de 5 días hábiles después de que la UPT recibe las facturas físicas.</p>
+    
+    <p>*El proceso de prueba de una base de datos de facturación se realiza en un periodo máximo de 5 días hábiles después de que la UPT recibe las facturas físicas.</p>
+        
+</div>
+
+
+   
