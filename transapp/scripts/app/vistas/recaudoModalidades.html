@@ -12,7 +12,7 @@
              	<ul>
                     <li><a href="#recaudo-modalidades-campos" data-transition="none">Campos</a></li>                
                     <li><a href="#recaudo-modalidades-formas-pago-recaudo" data-transition="none">Formas de pago en el momento del recaudo</a></li>        
-                    <li><a data-transition="none">Con codigo de barras</a></li>
+                    <li><a href="#recaudo-modalidades-con-codigo-barras" data-transition="none">Con codigo de barras</a></li>
                     <li><a href="#recaudo-modalidades-sin-codigo-barras" data-transition="none">Sin codigo de barras</a></li>                    
                  </ul>
         </li>
@@ -75,7 +75,7 @@
 <div 
      id="recaudo-modalidades-campos"
      data-role="view"    
-     data-title="Modalidades"
+     data-title="Campos"
      data-layout="tabstrip-layout">
 
 
@@ -83,34 +83,18 @@
         Campos
     </h2>
     
-    <p>
-		La captura de los datos puede ser de forma manual o automática a través de un código de barras.
-        Por default, el sistema siempre captura el valor del recaudo y registra la fecha del día en que se realiza la transacción.
-        Adicionalmente, el servicio de recaudo ofrece al cliente la posibilidad de capturar hasta 3 campos (referencias) que identifiquen a sus pagadores, con las siguientes características:
+    <div class="field-item even" property="content:encoded"><ul><li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">La captura de los datos puede ser de forma manual o automática a través de un código de barras.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Por default, el sistema siempre captura el valor del recaudo y registra la fecha del día en que se realiza la transacción.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Adicionalmente, el servicio de recaudo ofrece al cliente la posibilidad de capturar hasta 3 campos (referencias) que identifiquen a sus pagadores, con las siguientes características:</span></span>
+    <ul><li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Caracteres alfanuméricos.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Longitud máxima de cada campo: 25 caracteres.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Sistemas de validación de captura de campos.</span></span></li>
+    </ul></li>
+    </ul><p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Los datos capturados en el campo 3, le permitirán al cliente realizar validación del dígito de chequeo en el NIT (referencia 3).</span></span></p>
+    <p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><span style="color:#666666"><strong>Nota:</strong> </span>El sistema permite parametrizar en los 3 campos, de acuerdo a las necesidades del cliente (en caso de que no se requiera validación del NIT) &nbsp;25 algoritmos adicionales de validación, cuando no se realice la captura a través de código de barras, para evitar inconsistencias en la captura de la información manual.</span></span></p>
+    <p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><strong><span style="color:#666666">Ver Anexo 1:</span> <a href="/sites/default/files/anexos/recaudos/Anexo%201%20-%20Algoritmos%20de%20Recaudos.pdf" target="_blank">Algoritmos de Recaudos</a></strong></span></span></p>
+    </div>
         
-    </p>
-    
-    <ul>
-        <li>
-            Caracteres alfanuméricos.        
-        </li>
-        <li>
-			Longitud máxima de cada campo: 25 caracteres.        
-        </li>
-    </ul>
-    
-	<p>
-    	Sistemas de validación de captura de campos.
-		Los datos capturados en el campo 3, le permitirán al cliente realizar validación del dígito de chequeo en el NIT (referencia 3).
-    </p>
-
-
-    <p>
-		Nota: El sistema permite parametrizar en los 3 campos, de acuerdo a las necesidades del cliente (en caso de que no se requiera validación del NIT)  25 algoritmos adicionales de validación, cuando no se realice la captura a través de código de barras, para evitar inconsistencias en la captura de la información manual.        
-    </p>
-
-    
-    
 </div>
 
 <div 
@@ -124,35 +108,78 @@
         Formas de Pago al momento del Recaudo
     </h2>
     
-    <p>
-        Ofrecemos a los clientes o sus usuarios, la posibilidad de efectuar el pago en caja con las siguientes modalidades: 
+    <div class="field-item even" property="content:encoded"><p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Ofrecemos a los clientes o sus usuarios, la posibilidad de efectuar el pago en caja con las siguientes modalidades:&nbsp;</span></span></p>
+    <ul><li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Efectivo</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Cargo a cuenta</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Cheques:</span></span>
+    <ul><li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Se aceptan cheques y/o remesas negociadas (Previa asignación de cupo de remesas)</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Se acepta el pago de UNA factura con N cheques.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Se acepta el pago de N facturas con un cheque.</span></span></li>
+    </ul></li>
+    </ul><p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><span style="color:#666666"><strong>Nota:</strong> </span>Si el pago con un cheque es de más de siete (7) facturas, se ingresará un solo registro en caja, indicando que el pago recibido corresponde a “MAS DE SIETE CUPONES” y en el proceso de cuadre diario, el pago se aplica a cada una de las facturas con las cuales se recibió el cheque, mostrando estos registros discriminados al siguiente día de realizada la transacción.</span></span></p>
+    <p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Es importante tener en cuenta esta situación para alertar al cliente de cómo serán procesados estos registros.</span></span></p>
+    <ul><li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Pagos Mixtos:</span></span>
+    <ul><li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Efectivo - Cargo a cuenta</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Efectivo - Cheque</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Efectivo - Cargo a cuenta – Cheque</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Cargo a cuenta – Cheque</span></span></li>
+    </ul></li>
+    </ul></div>
+</div>
 
-        Efectivo
-        Cargo a cuenta
-        Cheques:
-        Se aceptan cheques y/o remesas negociadas (Previa asignación de cupo de remesas)
-        Se acepta el pago de UNA factura con N cheques.
-        Se acepta el pago de N facturas con un cheque.
-        Nota: Si el pago con un cheque es de más de siete (7) facturas, se ingresará un solo registro en caja, indicando que el pago recibido corresponde a “MAS DE SIETE CUPONES” y en el proceso de cuadre diario, el pago se aplica a cada una de las facturas con las cuales se recibió el cheque, mostrando estos registros discriminados al siguiente día de realizada la transacción.
-        
-        Es importante tener en cuenta esta situación para alertar al cliente de cómo serán procesados estos registros.
-        
-        Pagos Mixtos:
-        Efectivo - Cargo a cuenta
-        Efectivo - Cheque
-        Efectivo - Cargo a cuenta – Cheque
-        Cargo a cuenta – Cheque
-    </p>
+<div 
+     id="recaudo-modalidades-con-codigo-barras"
+     data-role="view"    
+     data-title="Con código de barras"
+     data-layout="tabstrip-layout">
 
+
+    <h2>
+        Con código de barras
+    </h2>
     
-    
+    <div class="field-item even" property="content:encoded"><p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El Recaudo con Validación de Código de Barras es el tipo de recaudo mediante el cual el cliente emite una factura o tarjeta de recaudo con un código de barras que identifica la factura y que facilita la captura de información.</span></span></p>
+    <p><span style="color:#666666"><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><u><strong>Características generales</strong></u></span></span></span></p>
+    <ul><li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Captura y validación automática del valor, fecha de vencimiento y las referencias.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">La captura del código de barras puede ser opcional u obligatoria de acuerdo a las necesidades del cliente.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Así se define la estructura:</span></span></li>
+    </ul><p class="rtecenter rteindent1"><span style="color:#666666"><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><strong>Estructura Código de Barras</strong></span></span></span></p>
+    <table border="1" cellpadding="1" cellspacing="1" style="width:100%"><thead><tr><th scope="col">
+    <p><span style="color:#666666"><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Concepto<br>
+    			Código</span></span></span></p>
+    </th>
+    <th scope="col"><span style="color:#666666"><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Número EAN/GS1</span></span></span></th>
+    <th scope="col"><span style="color:#666666"><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Descripción</span></span></span></th>
+    </tr></thead><tbody><tr><td><span style="font-size:16px">IAC13</span></td>
+    <td><span style="font-size:16px">(415)</span></td>
+    <td><span style="font-size:16px">Llave del recaudo, la cual identifica el recaudo de cada cliente</span></td>
+    </tr><tr><td><span style="font-size:16px">Referencia</span></td>
+    <td><span style="font-size:16px">(8020)</span></td>
+    <td><span style="font-size:16px">Llave dentro de cada recaudo, es posible utilizar identificación de la factura, del pago o del cliente.</span></td>
+    </tr><tr><td><span style="font-size:16px">Valor</span></td>
+    <td><span style="font-size:16px">(3900)</span></td>
+    <td><span style="font-size:16px">Monto a recaudar sin decimales</span></td>
+    </tr><tr><td><span style="font-size:16px">Fecha</span></td>
+    <td><span style="font-size:16px">(96)</span></td>
+    <td><span style="font-size:16px">Fecha de vencimiento</span></td>
+    </tr></tbody></table><p><img alt="" src="http://www.transappcional.com.co/sites/default/files/codigodebarras.jpg" style="height:176px; width:794px"></p>
+    <p><span style="color:#666666"><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><u><strong>Documentación requerida</strong></u></span></span></span></p>
+    <p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Para los clientes que cuentan con la opción de código de barras en sus facturas, y desean contratar el servicio de recaudo, se hace necesario realizar al interior del banco la configuración del código de barras.</span></span></p>
+    <p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">La configuración viene acompañada de la realización de pruebas previas de captura de dichos códigos. Lo anterior, permitirá validar la calidad de la impresión, captura y contenido, y se requiere de mínimo 3 facturas suministradas por cliente.</span></span></p>
+    <p><span style="color:#666666"><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><u><strong>Adicionalmente para protocolizar el convenio</strong></u></span></span></span></p>
+    <ul><li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Formato Convenio del Servicio de Recaudo Empresarial anexo al Contrato de Cuenta Corriente FT1256.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Fotocopia de la cédula de ciudadanía o equivalente del Representante Legal.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Certificado de la Cámara de Comercio vigente no superior a 90 días de expedición.</span></span></li>
+    </ul><p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><span style="color:#666666"><strong>Nota: </strong></span>En caso que el cliente ya tenga implementado el recaudo con el Banco y desee implementar el código de barras en sus facturas, no se requiere la firma de un nuevo convenio.</span></span></p>
+    <p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Adicionalmente le recomendamos consultar el <strong><span style="color:#666666">Anexo: </span><a href="/sites/default/files/anexos/recaudos/Listas%20de%20Chequeo%20Implementaci%F3n%20Productos%20Transaccionales.xls" target="_blank">Listas de Chequeo Implementación Productos Transaccionales</a>, </strong>dónde podrá consultar los puntos a tener en cuenta para la implementación.</span></span></p>
+    </div>        
 </div>
 
 
 <div 
      id="recaudo-modalidades-sin-codigo-barras"
      data-role="view"    
-     data-title="Formas de Pago"
+     data-title="Sin código de barras"
      data-layout="tabstrip-layout">
 
 
@@ -160,25 +187,19 @@
         Sin código de barras
     </h2>
     
-    <p>
-        Aplica para aquellos clientes que no emiten factura o que sus facturas no tienen códigos de barras. Para éste caso no hay ningún tipo de validación de la información.
-
-        Características generales
-        
-        El usuario que realiza el pago no necesita de presentación de la factura de forma obligatoria.
-        Si el cliente no emite factura, el usuario solo debe presentar la información de las referencias del recaudo.
-        El ingreso de las referencias se realiza de manera manual en la caja de las Oficinas.
-        Documentación requerida
-        
-        Los documentos requeridos al cliente para la implementación de un convenio de recaudo sin validación de código de barras es la siguiente:
-        
-        Formato Convenio del Servicio de Recaudo Empresarial anexo al Contrato de Cuenta Corriente FT1256.
-        Fotocopia de la cédula de ciudadanía o equivalente del Representante Legal.
-        Certificado de la Cámara de Comercio vigente no superior a 90 días de expedición.
-        Nota: El Convenio del Servicio de Recaudo debe ser diligenciado totalmente sin tachones ni enmendaduras.
-    </p>
-
-    
+    <div class="field-item even" property="content:encoded"><p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Aplica para aquellos clientes que no emiten factura o que sus facturas no tienen códigos de barras. Para éste caso no hay ningún tipo de validación de la información.</span></span></p>
+    <p><span style="color:#666666"><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><u><strong>Características generales</strong></u></span></span></span></p>
+    <ul><li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El usuario que realiza el pago no necesita de presentación de la factura de forma obligatoria.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Si el cliente no emite factura, el usuario solo debe presentar la información de las referencias del recaudo.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El ingreso de las referencias se realiza de manera manual en la caja de las Oficinas.</span></span></li>
+    </ul><p><span style="color:#666666"><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><u><strong>Documentación requerida</strong></u></span></span></span></p>
+    <p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Los documentos requeridos al cliente para la implementación de un convenio de recaudo sin validación de código de barras es la siguiente:</span></span></p>
+    <ul><li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Formato Convenio del Servicio de Recaudo Empresarial anexo al Contrato de Cuenta Corriente FT1256.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Fotocopia de la cédula de ciudadanía o equivalente del Representante Legal.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Certificado de la Cámara de Comercio vigente no superior a 90 días de expedición.</span></span></li>
+    </ul><p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><span style="color:#666666"><strong>Nota: </strong></span>El Convenio del Servicio de Recaudo debe ser diligenciado totalmente sin tachones ni enmendaduras.</span></span></p>
+    <p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">En el <strong><span style="color:#666666">Anexo:</span> <a href="/sites/default/files/anexos/recaudos/Listas%20de%20Chequeo%20Implementaci%F3n%20Productos%20Transaccionales.xls" target="_blank">Listas de Chequeo Implementación Productos Transaccionales</a></strong>, podrá consultar como implementar el producto.</span></span></p>
+    </div>
     
 </div>
 
@@ -186,7 +207,7 @@
 <div 
      id="recaudo-modalidades-recaudo-linea"
      data-role="view"    
-     data-title="Formas de Pago"
+     data-title="Recaudo en Línea"
      data-layout="tabstrip-layout">
 
 
@@ -195,33 +216,29 @@
     </h2>
     
     <div class="field-item even" property="content:encoded"><p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Este tipo de recaudo permite al cliente recaudar a través de nuestro canal de AzulNet (portal transaccional en internet), mediante la validación de su base de facturación.</span></span></p>
-<p><span style="color:#666666"><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><u><strong>Características generales</strong></u></span></span></span></p>
-<ul><li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Validación automática del valor, fecha de vencimiento y la referencia mediante consulta de base de datos entregada previamente por el cliente.</span></span></li>
-<li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Las bases de datos deben reportarse en formato TXT.</span></span></li>
-<li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El sistema permite parametrizar las fechas de recaudo, de tal manera que admita o no el pago de facturas vencidas según requerimientos del cliente.</span></span></li>
-<li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El sistema se ajusta a la estructura de la base de datos de facturación del cliente, sin embargo el archivo debe contener mínimo la siguiente información:</span></span>
-<ul><li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Referencia de Pago.</span></span></li>
-<li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Valor a Pagar.</span></span></li>
-<li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Fecha de Vencimiento (si el cliente requiere restringir la fecha de pago).</span></span></li>
-</ul></li>
-</ul><p><span style="color:#666666"><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><u><strong>Documentación requerida</strong></u></span></span></span></p>
-<ul><li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Mínimo un (1) archivo plano para prueba.</span></span></li>
-<li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Formato Convenio del Servicio de Recaudo Empresarial anexo al Contrato de Cuenta Corriente FT143.</span></span></li>
-<li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Fotocopia de la cédula de ciudadanía o equivalente del Representante Legal.</span></span></li>
-<li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Certificado de la Cámara de Comercio vigente no superior a 90 días de expedición.</span></span></li>
-<li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Lista de chequeo con las especificaciones de la prueba.</span></span></li>
-</ul><p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><span style="color:#666666"><strong>Nota:</strong> </span>En caso que el cliente ya tenga implementado el recaudo con el Banco y desee implementar la validación mediante base de datos, no se requiere la firma de un nuevo convenio.</span></span></p>
-<p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Adicionalmente le recomendamos consultar el <strong><span style="color:#666666">Anexo:</span><a href="/sites/default/files/anexos/recaudos/Listas%20de%20Chequeo%20Implementaci%F3n%20Productos%20Transaccionales.xls" target="_blank"> Listas de Chequeo Implementación Productos Transaccionales</a></strong><a href="/banca/sites/default/files/anexos/recaudos/Listas%20de%20Chequeo%20Implementaci%F3n%20Productos%20Transaccionales.xls" target="_blank"> </a>dónde podrá consultar los puntos a tener en cuenta para la implementación.</span></span></p>
-</div>
-
-    
-    
-</div>
+    <p><span style="color:#666666"><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><u><strong>Características generales</strong></u></span></span></span></p>
+    <ul><li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Validación automática del valor, fecha de vencimiento y la referencia mediante consulta de base de datos entregada previamente por el cliente.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Las bases de datos deben reportarse en formato TXT.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El sistema permite parametrizar las fechas de recaudo, de tal manera que admita o no el pago de facturas vencidas según requerimientos del cliente.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El sistema se ajusta a la estructura de la base de datos de facturación del cliente, sin embargo el archivo debe contener mínimo la siguiente información:</span></span>
+    <ul><li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Referencia de Pago.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Valor a Pagar.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Fecha de Vencimiento (si el cliente requiere restringir la fecha de pago).</span></span></li>
+    </ul></li>
+    </ul><p><span style="color:#666666"><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><u><strong>Documentación requerida</strong></u></span></span></span></p>
+    <ul><li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Mínimo un (1) archivo plano para prueba.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Formato Convenio del Servicio de Recaudo Empresarial anexo al Contrato de Cuenta Corriente FT143.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Fotocopia de la cédula de ciudadanía o equivalente del Representante Legal.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Certificado de la Cámara de Comercio vigente no superior a 90 días de expedición.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Lista de chequeo con las especificaciones de la prueba.</span></span></li>
+    </ul><p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><span style="color:#666666"><strong>Nota:</strong> </span>En caso que el cliente ya tenga implementado el recaudo con el Banco y desee implementar la validación mediante base de datos, no se requiere la firma de un nuevo convenio.</span></span></p>
+    <p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Adicionalmente le recomendamos consultar el <strong><span style="color:#666666">Anexo:</span><a href="/sites/default/files/anexos/recaudos/Listas%20de%20Chequeo%20Implementaci%F3n%20Productos%20Transaccionales.xls" target="_blank"> Listas de Chequeo Implementación Productos Transaccionales</a></strong><a href="/banca/sites/default/files/anexos/recaudos/Listas%20de%20Chequeo%20Implementaci%F3n%20Productos%20Transaccionales.xls" target="_blank"> </a>dónde podrá consultar los puntos a tener en cuenta para la implementación.</span></span></p>
+    </div></div>
 
 <div 
      id="recaudo-modalidades-domiciliacion"
      data-role="view"    
-     data-title="Formas de Pago"
+     data-title="Domiciliación"
      data-layout="tabstrip-layout">
 
 
@@ -230,49 +247,49 @@
     </h2>
     
     <div class="field-item even" property="content:encoded"><p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El servicio de Domiciliación le permite al cliente entregar al Banco la administración del pago de las facturas mediante la validación de su base de facturación.</span></span></p>
-<p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El banco se encargará de realizar periódicamente el débito de los valores correspondientes de la cuenta de ahorros o corriente de sus clientes, liberándolos del control de fechas de pago y reduciendo los índices de mora en la cartera de su empresa. </span></span></p>
-<p><span style="color:#666666"><u><strong><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Características generales</span></span></strong></u></span></p>
-<h3><span style="color:#666666"><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><strong>Cliente Facturador</strong></span></span></span></h3>
-<ul><li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Validación automática del valor, fecha de vencimiento y la referencia mediante consulta de base de datos entregada previamente por el cliente.</span></span></li>
-<li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Las bases de datos deben reportarse en formato TXT.</span></span></li>
-<li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El sistema se ajusta a la estructura de la base de datos de facturación del cliente, sin embargo el archivo debe contener mínimo la siguiente información:</span></span>
-<ul><li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Referencia de pago.</span></span></li>
-<li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Valor a pagar.</span></span></li>
-<li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Fecha de vencimiento (si el cliente requiere restringir la fecha de pago).</span></span></li>
-</ul></li>
-<li>
-<p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El recaudo se realiza al final del día y se reporta en el mismo archivo de recaudo que se reportan los recaudos que se realizan en oficina y en Azulnet.</span></span></p>
-</li>
-<li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">La base de datos que se utiliza para el recaudo en línea por el canal Azulnet es la misma para el servicio de domiciliación.​</span></span></li>
-</ul><h3><span style="color:#666666"><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><strong>Cliente Pagador</strong></span></span></span></h3>
-<ul><li>
-<p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El cliente podrá domiciliar sus pagos en la oficina en donde tiene radicada su cuenta o a través de nuestra Banca Electrónica, Azulnet.</span></span></p>
-</li>
-<li>
-<p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El cliente podrá domiciliar sus servicios asignando UNA sola cuenta para realizar el débito.</span></span></p>
-</li>
-<li>
-<p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">La fecha de débito a la cuenta se realiza 5 días antes de la fecha del primer vencimiento y se realizará periódicamente de acuerdo con los ciclos de facturación de su empresa.</span></span></p>
-</li>
-<li>
-<p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">En caso de no tener los fondos para el pago nuestro sistema reintentará efectuar el débito al siguiente día para garantizar el pago de la factura y así respectivamente hasta la fecha de vencimiento de la misma.</span></span></p>
-</li>
-<li>
-<p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">En caso que sus clientes domicilien sus facturas sobre una cuenta corriente y tiene cupo de sobregiro, éste se utilizará para el pago de los servicios correspondientes.</span></span></p>
-</li>
-<li>
-<p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Su cliente podrá definir el valor máximo por el cual autoriza que se haga el débito en su cuenta del servicio correspondiente, si el valor de la factura es mayor al valor autorizado no se realizará el débito. Lo anterior aplica para la domiciliación solicitada directamente en las oficinas.</span></span></p>
-</li>
-<li>
-<p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Sus clientes recibirán notificaciones a un correo electrónico registrado con anterioridad como se describe a continuación:</span></span></p>
-<ul><li>
-<p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><span style="color:#666666"><strong>Recepción de Factura:</strong> </span>Cuando el Banco recibe la factura de la empresa se le informa que se encuentra disponible y la fecha de vencimiento.</span></span></p>
-</li>
-<li>
-<p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><span style="color:#666666"><strong>Pago realizado:</strong> </span>Cuando se ha realizado el pago sus clientes recibirán una notificación informando si fue exitoso o si no lo ha sido, el motivo del rechazo. Ejemplo: fondos insuficientes.</span></span></p>
-</li>
-</ul></li>
-</ul></div>
+    <p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El banco se encargará de realizar periódicamente el débito de los valores correspondientes de la cuenta de ahorros o corriente de sus clientes, liberándolos del control de fechas de pago y reduciendo los índices de mora en la cartera de su empresa. </span></span></p>
+    <p><span style="color:#666666"><u><strong><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Características generales</span></span></strong></u></span></p>
+    <h3><span style="color:#666666"><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><strong>Cliente Facturador</strong></span></span></span></h3>
+    <ul><li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Validación automática del valor, fecha de vencimiento y la referencia mediante consulta de base de datos entregada previamente por el cliente.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Las bases de datos deben reportarse en formato TXT.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El sistema se ajusta a la estructura de la base de datos de facturación del cliente, sin embargo el archivo debe contener mínimo la siguiente información:</span></span>
+    <ul><li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Referencia de pago.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Valor a pagar.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Fecha de vencimiento (si el cliente requiere restringir la fecha de pago).</span></span></li>
+    </ul></li>
+    <li>
+    <p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El recaudo se realiza al final del día y se reporta en el mismo archivo de recaudo que se reportan los recaudos que se realizan en oficina y en Azulnet.</span></span></p>
+    </li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">La base de datos que se utiliza para el recaudo en línea por el canal Azulnet es la misma para el servicio de domiciliación.​</span></span></li>
+    </ul><h3><span style="color:#666666"><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><strong>Cliente Pagador</strong></span></span></span></h3>
+    <ul><li>
+    <p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El cliente podrá domiciliar sus pagos en la oficina en donde tiene radicada su cuenta o a través de nuestra Banca Electrónica, Azulnet.</span></span></p>
+    </li>
+    <li>
+    <p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El cliente podrá domiciliar sus servicios asignando UNA sola cuenta para realizar el débito.</span></span></p>
+    </li>
+    <li>
+    <p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">La fecha de débito a la cuenta se realiza 5 días antes de la fecha del primer vencimiento y se realizará periódicamente de acuerdo con los ciclos de facturación de su empresa.</span></span></p>
+    </li>
+    <li>
+    <p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">En caso de no tener los fondos para el pago nuestro sistema reintentará efectuar el débito al siguiente día para garantizar el pago de la factura y así respectivamente hasta la fecha de vencimiento de la misma.</span></span></p>
+    </li>
+    <li>
+    <p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">En caso que sus clientes domicilien sus facturas sobre una cuenta corriente y tiene cupo de sobregiro, éste se utilizará para el pago de los servicios correspondientes.</span></span></p>
+    </li>
+    <li>
+    <p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Su cliente podrá definir el valor máximo por el cual autoriza que se haga el débito en su cuenta del servicio correspondiente, si el valor de la factura es mayor al valor autorizado no se realizará el débito. Lo anterior aplica para la domiciliación solicitada directamente en las oficinas.</span></span></p>
+    </li>
+    <li>
+    <p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Sus clientes recibirán notificaciones a un correo electrónico registrado con anterioridad como se describe a continuación:</span></span></p>
+    <ul><li>
+    <p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><span style="color:#666666"><strong>Recepción de Factura:</strong> </span>Cuando el Banco recibe la factura de la empresa se le informa que se encuentra disponible y la fecha de vencimiento.</span></span></p>
+    </li>
+    <li>
+    <p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><span style="color:#666666"><strong>Pago realizado:</strong> </span>Cuando se ha realizado el pago sus clientes recibirán una notificación informando si fue exitoso o si no lo ha sido, el motivo del rechazo. Ejemplo: fondos insuficientes.</span></span></p>
+    </li>
+    </ul></li>
+    </ul></div>
     
 </div>
 
@@ -280,7 +297,7 @@
 <div 
      id="recaudo-modalidades-pse-boton-pagos"
      data-role="view"    
-     data-title="Formas de Pago"
+     data-title="Botón de Pagos"
      data-layout="tabstrip-layout">
 
 
