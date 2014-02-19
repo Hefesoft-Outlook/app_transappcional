@@ -1,0 +1,498 @@
+   
+<div data-role="view"    
+     data-title="Funcionamiento"
+     data-layout="tabstrip-layout">
+
+    
+    <div class="field-item even" property="content:encoded"><p>Para tener un exitoso proceso de venta e implementación del producto es importante tener en cuenta los siguientes pasos:</p>
+    <ul><li>Vinculación.</li>
+    <li>Implementación.</li>
+    <li>Creación de Proveedores.</li>
+    <li>Cargue de Facturas.</li>
+    <li>Operación de Anticipo de Facturas.</li>
+    <li>Cubrimiento o Pago de Obligaciones.</li>
+    </ul></div>
+
+    <ul data-role="listview">
+        <li><a href="#pagos-confirming-vinculacion" data-transition="none">Vinculación</a></li>
+        <li><a href="#pagos-confirming-implementacion" data-transition="none">Implementación</a></li>
+        <li><a href="#pagos-confirming-creacion-proveedores" data-transition="none">Creación de Proveedores</a></li>
+        <li><a href="#pagos-confirming-cargue-facturas" data-transition="none">Cargue de Facturas</a></li>
+        <li><a href="#pagos-confirming-anticipo" data-transition="none">Operación de Anticipo de Facturas</a></li>
+        <li><a href="#pagos-confirming-cubrimiento" data-transition="none">Cubrimiento o Pago de Obligaciones</a></li>
+        <li><a href="#pagos-confirming-pagador" data-transition="none">Información al Pagador</a></li>
+        <li><a href="#pagos-confirming-proveedor" data-transition="none">Información al Proveedor</a></li>
+        <li><a href="#pagos-confirming-documentacion" data-transition="none">Documentación requerida</a></li>
+    </ul>
+</div>
+
+<div 
+     id="pagos-confirming-documentacion"
+     data-role="view"    
+     data-title="Documentacion"
+     data-layout="tabstrip-layout">
+
+    <h2>
+        Documentación requerida
+    </h2>
+    
+    <ul><li>FT1433 Formato de Vinculación AzulNet Empresas y Pymes.</li>
+    <li>FT 1525 Formato Contrato Servicio Confirming.</li>
+    <li>Documento electrónico de Adhesión al sistema Confirming para proveedores.</li>
+    </ul>
+    
+    <h3>
+        Dia 1
+    </h3>
+    
+    <div>
+    <p>1. Envío de contrato y documentación requerida.</p>
+    <p>2. Confirmación y aprobación cupo Confirming por parte de Riesgos de Crédito</p>
+    <p>3. Apertura del contrato.</p>
+    <p>4. Marcación del cupo Confirming por parte de Operaciones Confirming.</p>
+    <p>5. Marcación de comisiones al cliente.</p>
+    </div>
+    
+    <h3>
+        Dia 2
+    </h3>
+    
+    <div>
+    <p>6. El cliente realiza la creación de los proveedores en Azulnet.</p>
+    <p>7. El proveedor acepta las condiciones en la Web Proveedores</p>
+    <p>8. El cliente realiza el cargue de las facturas en Azulnet.</p>
+    </div>
+    
+    <h3>
+        Dia 3
+    </h3>
+    
+    <div>
+    <p>9. Se realiza la marcación de tasas según nivel de ventas y las comisiones definidas al proveedor.</p>
+    <p>10. Se realiza la marcación de tasas y comisiones según nivel de ventas o a acuerdo con el proveedor.</p>
+    </div>
+    
+    <h3>
+        Dia 4
+    </h3>
+    
+    <p>11. El proveedor realiza el anticipo a través de la Web Proveedores.</p>
+    
+</div>
+
+<div 
+     id="pagos-confirming-proveedor"
+     data-role="view"    
+     data-title="Proveedor"
+     data-layout="tabstrip-layout">
+
+    <h2>
+        Información al Proveedor
+    </h2>
+    
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Confirming suministra a los proveedores toda la información de las facturas y anticipos a través de la Web Proveedores en las siguientes consultas:</p>
+<p>Tenga en cuenta:&nbsp;</p>
+<ul><li>La información de las consultas es en línea.&nbsp;</li>
+<li>Todas las consultas se pueden exportar en formato Excel.&nbsp;</li>
+</ul><p><span style="color:#666666"><strong>Documentos por Cobrar</strong></span></p>
+<ul><li>Esta consulta suministra el detalle de la información de todas las facturas que están disponibles para que el proveedor realice el anticipo o que están pendientes de pago.</li>
+</ul><p><span style="color:#666666"><strong>Documentos por Vencer</strong></span></p>
+<ul><li>Esta consulta suministra el detalle de la información de todas las facturas que el proveedor ya no puede anticipar pero que todavía no están vencidas.</li>
+</ul><p><span style="color:#666666"><strong>Documentos Vencidos</strong></span></p>
+<ul><li>Esta consulta suministra el detalle de la información de todas las facturas que ya están vencidas y que el proveedor no anticipo y que tampoco fueron pagadas al vencimiento por el pagador.</li>
+</ul><p><span style="color:#666666"><strong>Documentos Cancelados</strong></span></p>
+<ul><li>Esta consulta suministra el detalle de la información de todas las facturas que ya fueron anticipadas por el proveedor o pagadas por el cliente al vencimiento.</li>
+</ul></div></div></div>
+    
+</div>
+
+<div 
+     id="pagos-confirming-pagador"
+     data-role="view"    
+     data-title="Pagador"
+     data-layout="tabstrip-layout">
+
+    <h2>
+        Información al Pagador
+    </h2>
+    
+    <div class="field-item even" property="content:encoded"><p>Confirming tiene disponible toda la información del negocio para los clientes pagadores a través de Azulnet en las siguientes consultas:</p>
+<p><span style="color:#666666"><strong>Consulta de Proveedores</strong></span></p>
+<ul><li>Esta consulta suministra la información de los proveedores de los clientes, permitiéndole modificar, exportar información o eliminar el proveedor.</li>
+<li>Consulta de Lotes de Proveedores</li>
+<li>Esta consulta muestra el estado de los cargues de proveedores que se han ingresado en el sistema.</li>
+</ul><p><span style="color:#666666"><strong>Consulta Facturas</strong></span></p>
+<ul><li>Esta consulta suministra la información de las facturas cargadas a los proveedores de los clientes, permitiéndole modificar y exportar información o eliminar el proveedor.</li>
+</ul><p><span style="color:#666666"><strong>Consulta Lotes de Facturas</strong></span></p>
+<ul><li>Esta consulta muestra los estados y las características de todos los cargues de facturas en el sistema.</li>
+</ul><p><span style="color:#666666"><strong>Consulta de Vencimientos y Pagos</strong></span></p>
+<ul><li>Esta consulta permite al cliente consultar:</li>
+<li>Vencimientos día a día.</li>
+<li>Valor pagado a cada obligación</li>
+<li>Saldo por cada obligación</li>
+<li>Intereses de mora generados por obligaciones vencidas.</li>
+<li>Información del pagador de la obligación.</li>
+<li>Tipo y Número de Identificación</li>
+<li>Canal de pago</li>
+<li>Forma de pago</li>
+</ul><p><span style="color:#666666"><strong>Consulta Histórico de Facturas</strong></span></p>
+<ul><li>Esta consulta permite ver el detalle de todas las facturas que han sido anticipadas, sin importar que dichas obligaciones sigan activas o ya estén canceladas.</li>
+<li>Todas las consultas permite sé que exporte la información en formato CSV y PDF</li>
+</ul><p>*Ver el detalle de las consultas en el Anexo 1 Instructivo Azulnet - Confirming</p>
+</div>
+    
+</div>
+
+
+<div 
+     id="pagos-confirming-cubrimiento"
+     data-role="view"    
+     data-title="Cubrimiento"
+     data-layout="tabstrip-layout">
+
+
+    <h2>
+        Cubrimiento o Pago de Obligaciones
+    </h2>
+    
+    <div class="field-item even" property="content:encoded"><p>Confirming brinda a los clientes pagadores un proceso de aplicación de pagos automático, y canales diferentes para el cubrimiento de las obligaciones generadas por los anticipos de sus proveedores las cuales deben ser canceladas al vencimiento.</p>
+<ul><li>El cliente pagador puede realizar el cubrimiento de sus obligaciones a través del código de pago 0099.</li>
+<li>Los pagos pueden realizase a través de los siguientes canales:
+<ul><li>Transferencia electrónica ACH</li>
+<li>Red de Oficinas</li>
+<li>Convenio de Transporte de Efectivo</li>
+</ul></li>
+</ul><p><span style="color:#666666"><strong>Transferencia Electrónica ACH</strong></span></p>
+<ul><li>Para la realización de los pagos por este canal se debe tener en cuenta:
+<ul><li>Por tratarse de una transferencia interbancaria quien realice la operación identificará el código de pago como cuenta corriente.</li>
+<li>El titular de la cuenta destino es el cliente titular de Confirming.</li>
+<li>El código de pago es de cuatro dígitos.</li>
+<li>Cuando se ingrese el código de pago no se debe completar con ceros a la izquierda, solo se ingresan los cuatros dígitos.</li>
+</ul></li>
+</ul><p><span style="color:#666666"><strong>Red de Oficinas:</strong></span> Para la realización de los pagos por este canal se debe tener en cuenta:</p>
+<ul><li>El pagador debe informar el código de pago 0099 en la oficina que se realice el pago.</li>
+<li>El pagador debe suministrar los datos de tipo y número de identificación del quien está realizando el pago y el tipo y numero de identificación del titular de Confirming.</li>
+</ul><p><span style="color:#666666"><strong>Convenio de Transporte de Efectivo</strong></span></p>
+<ul><li>Para la realización de los pagos por este canal se debe tener en cuenta:
+<ul><li>El cliente pagador debe tener convenio de transporte de efectivo, el cual puede ser directo o amparado (Ver Manual de Transporte de Efectivo).</li>
+</ul></li>
+</ul><ul><li>La aplicación de pago se realiza con las obligaciones vencidas desde la más antigua a la más reciente ó las próximas a vencer.</li>
+<li>Si no hay obligaciones vencidas el pago se aplicará a las próximas a vencer en orden cronológico.</li>
+<li>Si el mismo día se vence más de una obligación se aplicará el pago en forma descendente desde la de mayor valor hasta la de menor valor.</li>
+<li>Si los recursos no son suficientes para el pago completo de una obligación se aplica de forma parcial.</li>
+<li>Si se realiza un pago por un monto superior al valor del total de las obligaciones del cliente, el remanente se abonará de forma automática a la cuenta que tenga el cliente vinculada al producto.</li>
+<li>La aplicación de los pagos en cheque se realiza el día del pago, pero si el cheque es devuelto en el proceso de canje, se reversará el pago a la obligación u obligaciones que no estén vencidas o de vencimiento más reciente.</li>
+<li>La aplicación del pago se realiza cada hora, liberando el cupo por el valor aplicado.</li>
+</ul></div>
+    
+</div>
+
+
+<div 
+     id="pagos-confirming-anticipo"
+     data-role="view"    
+     data-title="Operacion"
+     data-layout="tabstrip-layout">
+
+
+    <h2>
+        Operación de Anticipo de Facturas
+    </h2>
+    
+    <div class="field-items"><div class="field-item even" property="content:encoded"><p>Confirming brinda a los proveedores un canal exclusivo, ágil y seguro, la Web Proveedores, donde pueden realizar la solicitud de anticipo de facturas, consultar toda la información de las facturas anticipadas y cargas de sus pagadores.</p>
+<p>Para la realización del anticipo el proveedor previamente debe realizar los siguientes pasos:</p>
+<p><span style="color:#666666"><strong>Ingreso a la Web Proveedores</strong></span></p>
+<ul><li>Cuando el Usuario Principal ingresa por primera vez a la Web Proveedores solicitará la aceptación de Condiciones de Manejo del Sistema para Proveedores, las cuales deberán ser aceptadas por el usuario principal solo cuando realice el primer ingreso.</li>
+<li>El usuario principal tendrá un perfil administrador, el cual tendrá la opción de; crear, eliminar, bloquear, activar y asignar los perfiles a los usuarios que el proveedor determine para la operación del producto.</li>
+</ul><p><span style="color:#666666"><strong>Creación de Usuarios</strong></span></p>
+<ul><li>La asignación de los perfiles permitirá al proveedor tener usuarios para que tengan diferentes atribuciones según las políticas de cada empresa.
+<ul><li><span style="color:#666666"><strong>Usuario Consulta: </strong></span>Este perfil solo permite que el usuario tenga acceso a la opción de consulta de cada uno de los módulos de la Web Proveedores.</li>
+<li><span style="color:#666666"><strong>Usuario Operativo:</strong></span> Este perfil permite que el usuario tenga acceso a la opción de consulta de cada uno de los módulos y adicional que ejecute operaciones de anticipo de facturas.</li>
+<li><span style="color:#666666"><strong>Usuario Autorizador:</strong> </span>Este perfil permite que el usuario tenga acceso a la opción de consulta de cada uno de los módulos que el usuario autorice las operaciones de anticipo realizadas por el usuario operativo.</li>
+<li><span style="color:#666666"><strong>Usuario Operativo/Autorizador: </strong></span>Este perfil permite que el usuario realice consultas, operaciones de anticipo y las autorice.</li>
+</ul></li>
+</ul><ul><li>Cuando se realiza la creación de los usuarios se genera automáticamente un correo con la clave de ingreso a la cuenta de correo registrada para cada usuario.</li>
+</ul><p><span style="color:#666666"><strong>Anticipo de las Facturas</strong></span></p>
+<ul><li>El proveedor puede realizar el anticipo de las facturas el mismo día en que son cargadas por el pagador.</li>
+<li>Al solicitar el anticipo de las facturas el proveedor puede validar en línea:
+<ul><li>Relación de las facturas que se van anticipar.</li>
+<li>Pagadores de las facturas.</li>
+<li>Valor unitario y total de las facturas.</li>
+<li>Tasa de descuento a aplicar a cada factura.</li>
+<li>Número de días de anticipo de cada factura.</li>
+<li>Valor del descuento de cada factura y del total de las facturas.</li>
+<li>Forma de pago de cada factura:<br><ul class="rteindent1"><li>Abono a Cuenta en Otro Banco vía ACH.</li>
+<li>Abono en Cuenta del Banco Corpbanca.</li>
+<li>Expedición de Cheque de Gerencia.</li>
+</ul></li>
+<li>Valor de las comisiones a descontar de cada factura y del total de las facturas.</li>
+</ul></li>
+</ul><ul><li>El usuario puede realizar el anticipo de una, varias o el total de las facturas disponibles para anticipar.</li>
+<li>La Web Proveedores no permite a los usuarios realizar modificaciones a los datos de las facturas que han sido cargadas por los pagadores, excepto los datos de identificación y nombre del autorizado para reclamar el cheque de gerencia, cuando el anticipo tenga esta forma de pago.</li>
+<li>La disponibilidad para la realización de anticipo de facturas es:
+<ul><li>Lunes a Sábado.</li>
+<li>De 7:00 a.m. a 7:00 p.m.</li>
+</ul></li>
+</ul><ul><li>Si la forma de pago es con abono en cuenta de otro banco y el anticipo es autorizado después de las 3:00 p.m. los recursos son enviados al otro banco al día hábil siguiente de la operación.</li>
+<li>Si la forma de pago es con cheque de gerencia y el anticipo es autorizado después de las 3:30 p.m. el cheque podrá ser expedido al día hábil siguiente.</li>
+<li>Si la forma de pago es abono en cuenta del Banco Corpbanca el anticipo es abonado 10 minutos posterior a la hora de autorización de la operación, teniendo en cuenta el horario disponible para las operaciones.</li>
+<li>Si el anticipo es realizado en horario y día no hábil, el sistema realiza la liquidación del descuento con la fecha en que se está realizando la operación, más no en la fecha en que se envían los recursos a la cuenta o se expide el cheque.</li>
+<li>Si en el momento del anticipo el pagador y el proveedor se encuentran en alguna de las listas de control de prevención y lavado de activos, el sistema no permite realizar el anticipo.</li>
+<li>Si el proveedor no anticipa el pago de sus facturas, el sistema de forma automática realizará el pago al vencimiento, debitando de la cuenta que el cliente haya registrado en el contrato.</li>
+</ul></div></div>
+    
+</div>
+
+<div 
+     id="pagos-confirming-cargue-facturas"
+     data-role="view"    
+     data-title="Cargue de Facturas"
+     data-layout="tabstrip-layout">
+
+
+    <h2>
+        Cargue de Facturas
+    </h2>
+    
+    <div class="field-item even" property="content:encoded"><p>Posterior a la creación del proveedor el cliente puede realizar el cargue de la facturas a pagar.</p>
+<ul><li>El cargue de facturas se puede realizar de dos formas:
+<ul><li><span style="color:#666666"><strong>Cargue Manual:</strong> </span>Esta opción permite al cliente pagador realizar el cargue de las facturas de sus proveedores en Azulnet de forma manual, uno a uno, digitando los datos solicitados por el sistema.</li>
+<li><span style="color:#666666"><strong>Cargue Masivo:</strong></span> Está opción permite al cliente pagador realizar el cargue de las facturas de los proveedores a través de un archivo plano (Formato txt) que contiene toda la información requerida de las facturas de cada proveedor.</li>
+</ul></li>
+</ul><ul><li>Cuando se realiza el cargue de facturas el sistema realiza las siguientes validaciones:
+<ul><li>El proveedor que suministra la factura, este creado en el sistema.</li>
+<li>Si el cargue se realiza de forma manual y no se ingresan todos los datos solicitados el sistema no permite la creación.</li>
+<li>Si el cargue se realiza de forma masiva, el sistema valida que los datos que contiene el archivo estén completos, que cumpla con la estructura del archivo y el tipo de datos.</li>
+<li>El cargue no puede tener más de una vez la misma factura. El sistema valida que el número de factura mismo proveedor no esté repetido.</li>
+<li>Si se intenta realizar el cargue de una factura que ya fue cargada el sistema la reemplaza, siempre y cuando la factura no haya sido anticipada o pagada.</li>
+<li>La fecha de vencimiento de la factura no puede ser igual o anterior a la fecha del cargue.</li>
+</ul></li>
+</ul><ul><li>Si existe inconsistencia en el cargue masivo en el momento que se realizan las anteriores validaciones el sistema rechaza el archivo completo informando la causal del rechazo y los campos donde se presenta inconsistencia.</li>
+<li>El cargue de las facturas es en línea.</li>
+<li>Diariamente se genera un correo a los usuarios del proveedor con la información de las facturas cargadas.</li>
+<li>El cargue de las facturas por tratarse de una operación monetaria, debe ser autorizada por el usuario que tenga los privilegios asignados.</li>
+</ul></div>
+    
+</div>
+
+<div 
+     id="pagos-confirming-creacion-proveedores"
+     data-role="view"    
+     data-title="Creación de Proveedores"
+     data-layout="tabstrip-layout">
+
+
+    <h2>
+        Creación de Proveedores
+    </h2>
+    
+    <div class="field-item even" property="content:encoded"><p>Es la actividad inicial que debe realizar todo cliente pagador para el inicio de sus operaciones, que consiste en el ingreso de la información requerida del proveedor.</p>
+<ul><li>El ingreso de la información para la creación del proveedor se puede realizar de dos formas:
+<ul><li><strong>Creación Manual:</strong> Esta opción permite al cliente pagador realizar la creación de sus proveedores en Azulnet de forma manual, uno a uno, digitando los datos solicitados por el sistema.</li>
+<li><strong>Creación Masiva:</strong> Esta opción permite realizar la creación de los proveedores a través del cargue de un archivo plano (Formato txt) que contiene toda la información requerida del proveedor.</li>
+</ul></li>
+<li>Cuando se realiza el cargue de proveedores el sistema realiza las siguientes validaciones:
+<ul><li>Si el proveedor está registrado en alguna de las listas de control de prevención de lavado de activos no permite la creación.</li>
+<li>Si la creación se realiza de forma manual y no se ingresan todos los datos solicitados el sistema no permite la creación.</li>
+<li>Si la creación se realiza de forma masiva, el sistema valida que los datos que contiene el archivo estén completos, que cumpla con la estructura del archivo y el tipo de datos.</li>
+<li>Si el proveedor ya está creado para el mismo pagador el sistema no permite crearlo nuevamente. El sistema toma como llave el tipo y número de identificación.</li>
+</ul></li>
+</ul><ul><li>Una vez el sistema confirma la creación del proveedor, de forma automática se genera un correo electrónico al usuario registrado (Usuario Principal), informando su vinculación al producto, la dirección de acceso y la clave para ingresar a la Web Proveedores.</li>
+<li>Cuando el proveedor ya está vinculado a Confirming por otro Pagador, no se generará nueva clave de acceso.</li>
+</ul></div>
+    
+</div>
+
+<div 
+     id="pagos-confirming-implementacion"
+     data-role="view"    
+     data-title="Implementación"
+     data-layout="tabstrip-layout">
+
+
+    <h2>
+        Implementación
+    </h2>
+    
+    <div class="region region-content">
+  <div id="block-system-main" class="block block-system">
+
+      
+  <div class="content">
+    <div about="/transappcional/confirming/implementaci%C3%B3n" typeof="sioc:Item foaf:Document" class="ds-2col-stacked node node-producto-confirming node-full view-mode-full clearfix">
+
+  
+  <div class="group-header">
+      </div>
+
+  <div class="group-left">
+      </div>
+
+  <div class="group-right">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Para la implementación del producto se debe realizar la marcación de las condiciones definidas para el inicio de las operaciones, las cuales deben realizarse en los sistemas del banco con base en los siguientes puntos:</p>
+<p><span style="color:#666666"><strong>Alta del Contrato</strong></span></p>
+<ul><li>El alta del contrato se realiza en el Terminal Financiero Confirming, en el cual se registra la siguiente información:
+<ul><li>Nombre o razón social del cliente.</li>
+<li>Tipo y número de identificación.</li>
+<li>Tipo y número de cuenta de cargo: En esta cuenta se realizará el cobro de las comisiones y el débito para el pago de las facturas no anticipadas.</li>
+<li>Forma de Cargo: Si las facturas no son anticipadas al vencimiento se realizará el pago contra la cuenta antes mencionada; este cargo se puede realizar bajo la misma funcionalidad de pagos de Azulnet de forma detallada y consolidada.</li>
+</ul></li>
+</ul><ul><li>El alta de un contrato de Confirming, realiza las siguientes validaciones:
+<ul><li>El titular del Confirming (según las modalidades descritas anteriormente) debe estar creado en la BUC como cliente del banco.</li>
+<li>Si el cliente está registrado en alguna de las listas de control de prevención lavado de activos no permite el alta del contrato.</li>
+<li>El sistema valida que la cuenta de cargo sea del mismo titular de Confirming.</li>
+</ul></li>
+</ul><p><span style="color:#666666"><strong>Alta del Cupo de Confirming</strong></span></p>
+<ul><li>El alta del cupo se realiza en el Terminal Financiero Confirming, una vez sea aprobado por la Gerencia de Riesgos.</li>
+<li>Confirming Operaciones realizará el alta del cupo registrando la siguiente información:
+<ul><li>Valor del cupo aprobado</li>
+<li>Fecha de vigencia del cupo</li>
+<li>Plazo aprobado para las operaciones de Confirming. (Número de días definido para el&nbsp;anticipo de facturas).</li>
+</ul></li>
+</ul><ul><li>Para el alta del cupo en Confirming el contrato del cliente en el sistema debe estar activo.</li>
+<li>Si se requiere la aplicación de un extracupo, el área comercial gestora del cliente deberá presentarla al área con atribuciones respectivas (Vicepresidente de la Banca o área de riesgos en función del nivel de atribuciones). Una vez aprobada el alta y modificación del cupo en línea, para lo cual se requiere:&nbsp;
+<ul><li>Autorización del Vicepresidente de la banca correspondiente o del área de riesgos según atribuciones.</li>
+<li>Valor del extracupo.</li>
+<li>Plazo de vigencia del extracupo.</li>
+</ul></li>
+</ul><p><span style="color:#666666"><strong>Marcación de Tasa de Descuento</strong></span></p>
+<ul><li>La tasa de descuento puede ser de dos tipos:</li>
+</ul><ul class="rteindent1"><li>Variable:
+<ul><li>DTF</li>
+<li>IPC</li>
+</ul></li>
+<li>Fija</li>
+</ul><ul><li>En el sistema se registran tasas efectivas anuales.</li>
+<li>Cuando se va a realizar el registro de una tasa a cualquier nivel, el sistema valida que no exceda la TMR o tope de usura vigente.</li>
+<li>La aplicación de la marcación y/o modificación de la tasa de descuento se realiza en batch, esto quiere decir que empiezan a regir a partir del día siguiente de efectuada la marcación en el sistema. Por ejemplo si una tasa es marcada el día de hoy, ésta se ve reflejada en los anticipos que realice el proveedor el día de mañana.</li>
+<li>El producto tiene registrada una tasa genérica que aplica para todos los proveedores en el momento que se crean en el sistema, lo que implica que si existe una negociación particular con el pagador y/o proveedor se debe realizar la solicitud de marcación de la tasa definida.</li>
+<li>Confirming tiene 2 niveles de aplicación de tasas:
+<ul><li><span style="color:#666666"><strong>Nivel 1 Proveedor</strong>: </span>El sistema permite que se marque una tasa de descuento diferente a cada proveedor que vincule el cliente pagador. En consecuencia, cada proveedor puede tener una tasa de descuento por cada cliente pagador al cual este vinculado.</li>
+</ul></li>
+<li>Si se requiere que todos los proveedores de un mismo pagador tengan la misma tasa se registra en:</li>
+<li>
+<ul><li><span style="color:#666666"><strong>Nivel 2 Pagador</strong>: </span>El sistema permite que de acuerdo a las condiciones del negocio se cobre la misma tasa de descuento para todos los proveedores del pagador, para ello se registra en el sistema la tasa de descuento al pagador, la cual aplicará para todos los proveedores que este registre.</li>
+</ul></li>
+</ul><ul><li>El sistema permite marcar una tasa por rangos dependiendo del valor de la factura anticipada.</li>
+</ul><p class="rteindent1">Ejemplo:</p>
+<table border="1" style="height:151px; width:618px"><tbody><tr><th scope="col"><span style="color:#666666">Valor Factura Desde</span></th>
+<th scope="col"><span style="color:#666666">Valor Factura Hasta</span></th>
+<th scope="col"><span style="color:#666666">Tasa</span></th>
+</tr><tr><td class="rtecenter">0.01</td>
+<td class="rtecenter">10.000.000,00</td>
+<td class="rtecenter">14%</td>
+</tr><tr><td class="rtecenter">10.000.000,01</td>
+<td class="rtecenter">100.000.000,00</td>
+<td class="rtecenter">12%</td>
+</tr><tr><td class="rtecenter">100.000.000,01</td>
+<td class="rtecenter">1.000.000.000,00</td>
+<td class="rtecenter">10%</td>
+</tr><tr><td class="rtecenter">1.000.000.000,00</td>
+<td class="rtecenter">999.999.999.999,99</td>
+<td class="rtecenter">8%</td>
+</tr></tbody></table><p><strong>Marcación de Comisiones</strong></p>
+<ul><li>El producto tiene dos esquemas de cobro comisiones, que se aplican al cliente pagador o al proveedor, según la negociación efectuada.-</li>
+</ul><p>Para el cliente pagador:</p>
+<ul><li><strong>Comisión de Administración: </strong>Es la comisión que se cobra al pagador por cada una de las facturas anticipadas por sus proveedores, la cual puede pactarse como un valor fijo mensual o un porcentaje sobre el valor de las facturas anticipadas. Se cobra mensualmente o a diario si es sobre el porcentaje de la factura, con cargo a la cuenta corriente o de ahorros que se registró en el alta del contrato.</li>
+</ul><p>Para el proveedor:</p>
+<ul><li>Es la comisión que se cobran al proveedor en el momento que realiza el anticipo de la factura:
+<ul><li><strong>Comisión por Forma de Pago:</strong> Corresponde a las comisiones que se cobran dependiendo de la forma como se realice el pago de los anticipos que realice el proveedor que pueden ser ACH, Cheques o por abono en cuentas del Banco Corpbanca.</li>
+</ul></li>
+</ul><p>El sistema permite parametrizar la comisión de administración establecida para el pagador, a cargo de los proveedores, si así se define en la negociación efectuada, la cual será descontada en el momento del anticipo.</p>
+<ul><li>La aplicación de la marcación de las comisiones es en línea.</li>
+<li>El producto tiene registrado para cada concepto de comisión un valor genérico que aplica para todos los clientes pagadores y proveedores en el momento que se crean en el sistema, lo que implica que si existe una negociación particular con el pagador y/o proveedor se debe realizar la solicitud de marcación de la tarifa definida.</li>
+<li>El esquema de marcación de comisiones se realiza conforme se presentó en el apartado anterior.</li>
+</ul><p><strong>Inclusión del Módulo Confirming en Azulnet</strong></p>
+<p>Toda la funcionalidad del producto para el cliente pagador es a través del portal Azulnet, por lo que se requiere adicionar el módulo de Confirming en el portafolio del cliente que contrata el servicio, para ellos el Contrato Marco de Confirming contiene una clausula donde se autoriza al banco realizar dicho proceso, sin necesidad de diligenciar el formato de novedades de Azulnet adicional.</p>
+</div></div></div>  </div>
+
+  <div class="group-footer">
+      </div>
+
+</div>
+
+  </div>
+  
+</div> <!-- /.block -->
+<div id="block-views-preguntas-frecuentes-block-1" class="block block-views">
+
+        <h2>Preguntas relacionadas</h2>
+    
+  <div class="content">
+    <div class="view view-preguntas-frecuentes view-id-preguntas_frecuentes view-display-id-block_1 view-dom-id-a214cfd9e289ee437084aaf48b1f551b">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/%C2%BFque-es-el-confirming">.</a></span>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+  
+</div> <!-- /.block -->
+</div>
+    
+</div>
+
+
+<div 
+     id="pagos-confirming-vinculacion"
+     data-role="view"    
+     data-title="Vinculación"
+     data-layout="tabstrip-layout">
+
+
+    <h2>
+        Vinculación
+    </h2>
+    
+    <div class="field-item even" property="content:encoded"><p>Confirming es un producto dentro del portafolio de banca electrónica de nuestros clientes ya sea bajo la figura de Cliente Pagador o Cliente Proveedor descritos anteriormente que para su implementación y funcionamiento requiere:</p>
+    <ul><li>Firma de un Contrato Marco.</li>
+    <li>Cuenta corriente o de ahorros en Banco Corpbanca.</li>
+    <li>Servicio del portal de Azulnet.</li>
+    <li>Cupo de Confirming aprobado.</li>
+    </ul></div>
+    
+</div>
+
+
+    
+<style>
+    .km-ios  .km-content {
+        background: url(../../content/shared/images/patterns/pattern2.png);
+        box-shadow: inset 0 0 30px #95764D;
+        -webkit-box-shadow: inset 0 0 30px #95764D;
+    }
+    .km-ios  .km-listview .km-list {
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        box-shadow: 0 1px 5px #95764D;
+        -webkit-box-shadow: 0 1px 5px #95764D;
+    }
+    .km-ios  .km-listview .km-list > li {
+        border: none;
+    }
+    .km-ios  .km-listview .km-list > li:last-child {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    .km-ios  .km-navbar {
+        background: url(../../content/shared/images/patterns/pattern9.png);
+    }
+    .km-tablet .km-ios  .km-view-title {
+        color: #fff;
+        text-shadow: 0 -1px rgba(0,0,0,.5);
+    }
+    .km-ios  .km-navbar .km-button
+    {
+        background-color: #974d2e;
+    }
+
+</style>

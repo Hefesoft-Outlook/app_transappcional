@@ -3,7 +3,6 @@ define([
     "app/services/dataContextAutenticacion"
 ],
  function (kendo, dataContextAutenticacion) {
-
      
      function recaudoReferenciado(){
          $('#recaudo-definicion').on("click", function () {
@@ -33,19 +32,85 @@ define([
                  })
                  
                  $('#recaudo-transporte-modalidades').on("click", function () {
-                     window.kendoApp.navigate("scripts/app/vistas//recaudos/transporte/recaudoModalidadesTransporte.html");
+                     window.kendoApp.navigate("scripts/app/vistas/recaudos/transporte/recaudoModalidadesTransporte.html");
                  })
                  
                  $('#recaudo-transporte-argumentos').on("click", function () {
-                     window.kendoApp.navigate("scripts/app/vistas//recaudos/transporte/recaudoArgumentosTransporte.html");
+                     window.kendoApp.navigate("scripts/app/vistas/recaudos/transporte/recaudoArgumentosTransporte.html");
                  })
                  
                  $('#recaudo-transporte-implementacion').on("click", function () {
-                     window.kendoApp.navigate("scripts/app/vistas//recaudos/transporte/recaudoFuncionamientoTransporte.html");
+                     window.kendoApp.navigate("scripts/app/vistas/recaudos/transporte/recaudoFuncionamientoTransporte.html");
                  })
                   
                  $('#recaudo-transporte-tarifas').on("click", function () {
-                     window.kendoApp.navigate("scripts/app/vistas//recaudos/transporte/recaudoTarifasTransporte.html");
+                     window.kendoApp.navigate("scripts/app/vistas/recaudos/transporte/recaudoTarifasTransporte.html");
+                 })
+     }
+     
+     function pagosElectronicos(){
+         $('#pagos-electronicos-definicion').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/pagos/electronicos/Definicion.html");
+                 })
+                 
+                 $('#pagos-electronicos-modalidades').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/pagos/electronicos/Modalidades.html");
+                 })
+                 
+                 $('#pagos-electronicos-argumentos').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/pagos/electronicos/Argumentos.html");
+                 })
+                 
+                 $('#pagos-electronicos-implementacion').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/pagos/electronicos/Funcionamiento.html");
+                 })
+                  
+                 $('#pagos-electronicos-tarifas').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/pagos/electronicos/Tarifas.html");
+                 })
+     }
+     
+     function pagosConfirming(){
+         $('#pagos-confirming-definicion').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/pagos/confirming/Definicion.html");
+                 })
+                 
+                 $('#pagos-confirming-modalidades').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/pagos/confirming/Modalidades.html");
+                 })
+                 
+                 $('#pagos-confirming-argumentos').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/pagos/confirming/Argumentos.html");
+                 })
+                 
+                 $('#pagos-confirming-implementacion').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/pagos/confirming/Funcionamiento.html");
+                 })
+                  
+                 $('#pagos-confirming-tarifas').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/pagos/confirming/Tarifas.html");
+                 })
+     }
+     
+     function pagosCheques(){
+         $('#pagos-cheques-definicion').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/pagos/cheques/Definicion.html");
+                 })
+                 
+                 $('#pagos-cheques-modalidades').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/pagos/cheques/Modalidades.html");
+                 })
+                 
+                 $('#pagos-cheques-argumentos').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/pagos/cheques/Argumentos.html");
+                 })
+                 
+                 $('#pagos-cheques-implementacion').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/pagos/cheques/Funcionamiento.html");
+                 })
+                  
+                 $('#pagos-cheques-tarifas').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/pagos/cheques/Tarifas.html");
                  })
      }
 
@@ -54,14 +119,12 @@ define([
              loaded: function loaded() {                  
                  recaudoReferenciado();
                  recaudoTransporte();
+                 pagosElectronicos();
+                 pagosConfirming();
+                 pagosCheques();
              },
              login: function login() {
-                 var login = app.login_view.viewModel;                
-                 
-                 
-                
-                 
-                 
+                 var login = app.login_view.viewModel;    
                  
                  /*window.kendoApp.showLoading();                 
                  dataContextAutenticacion.login({ email: login.Usuario_Entidad.usuario, clave: login.Usuario_Entidad.password }).then(
