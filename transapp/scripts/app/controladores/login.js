@@ -4,28 +4,56 @@ define([
 ],
  function (kendo, dataContextAutenticacion) {
 
-
-
-     return {
-         viewModel: {
-             loaded: function loaded() {                 
-                  $('#recaudo-definicion').on("click", function () {
-                     window.kendoApp.navigate("scripts/app/vistas/recaudoReferenciado.html");
+     
+     function recaudoReferenciado(){
+         $('#recaudo-definicion').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/recaudos/referenciado/recaudoReferenciado.html");
                  })
                   
                   $('#recaudo-modalidades').on("click", function () {
-                     window.kendoApp.navigate("scripts/app/vistas/recaudoModalidades.html");
+                     window.kendoApp.navigate("scripts/app/vistas/recaudos/referenciado/recaudoModalidades.html");
                  })
                   
                   $('#recaudo-argumentos').on("click", function () {
-                     window.kendoApp.navigate("scripts/app/vistas/recaudoArgumentos.html");
+                     window.kendoApp.navigate("scripts/app/vistas/recaudos/referenciado/recaudoArgumentos.html");
                  })
                   
                  $('#recaudo-implementacion').on("click", function () {
-                     window.kendoApp.navigate("scripts/app/vistas/recaudoFuncionamiento.html");
+                     window.kendoApp.navigate("scripts/app/vistas/recaudos/referenciado/recaudoFuncionamiento.html");
+                 })
+                 
+                 $('#recaudo-tarifas').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/recaudos/referenciado/recaudoTarifas.html");
+                 })
+     }
+
+     function recaudoTransporte(){
+         $('#recaudo-transporte-definicion').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/recaudos/transporte/recaudoTransporte.html");
+                 })
+                 
+                 $('#recaudo-transporte-modalidades').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas//recaudos/transporte/recaudoModalidadesTransporte.html");
+                 })
+                 
+                 $('#recaudo-transporte-argumentos').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas//recaudos/transporte/recaudoArgumentosTransporte.html");
+                 })
+                 
+                 $('#recaudo-transporte-implementacion').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas//recaudos/transporte/recaudoFuncionamientoTransporte.html");
                  })
                   
-                  
+                 $('#recaudo-transporte-tarifas').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas//recaudos/transporte/recaudoTarifasTransporte.html");
+                 })
+     }
+
+     return {
+         viewModel: {
+             loaded: function loaded() {                  
+                 recaudoReferenciado();
+                 recaudoTransporte();
              },
              login: function login() {
                  var login = app.login_view.viewModel;                
