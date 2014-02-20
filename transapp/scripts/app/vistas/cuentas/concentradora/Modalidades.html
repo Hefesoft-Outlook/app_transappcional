@@ -1,0 +1,350 @@
+   
+<div data-role="view"    
+     data-title="Modalidades"
+     data-layout="tabstrip-layout">
+
+    <h2>
+        Modalidades
+    </h2>
+    
+    <p>El producto cuenta con 4 diferentes opciones que permiten a los clientes realizar sus diferentes pagos de acuerdo a sus necesidades.</p>
+    
+    <ul><li>Pagos Interbancarios (pagos a cuentas de otros bancos).</li>
+    <li>Pagos a Cuentas en Banco Corpbanca.</li>
+    <li>Pagos de Nómina.</li>
+    <li>Pagos de Facturas.</li>
+    </ul>
+
+    <ul data-role="listview" data-type="group">
+         <li>Pagos Interbancarios
+             	<ul>
+                    <li><a href="#pagos-electronicos-pagos-interbancarios-caracteristicas" data-transition="none">Caractiristicas</a></li>                     
+                 </ul>
+        </li>
+        <li>Pagos a Cuentas en Banco Corpbanca
+             	<ul>                    
+                    <li><a href="#pagos-electronicos-pagos-cuentas-caracteristicas" data-transition="none">Caractiristicas</a></li>                                         
+                 </ul>
+         </li>
+        <li>Pagos de nómina
+             	<ul>                    
+                    <li><a href="#pagos-electronicos-pagos-nomina-caracteristicas" data-transition="none">Caractiristicas</a></li>                                         
+                 </ul>
+         </li>
+        <li>Pago de Facturas
+             	<ul>                    
+                    <li><a href="#pagos-electronicos-pagos-facturas-caracteristicas" data-transition="none">Caractiristicas</a></li>                                         
+                 </ul>
+         </li>
+        <li>Reportes e Información al cliente
+             	<ul>                    
+                    <li><a href="#pagos-electronicos-pagos-informacion-cliente-consulta" data-transition="none">Consulta de Historial</a></li> 
+                    <li><a href="#pagos-electronicos-pagos-informacion-cliente-detalle" data-transition="none">Detalle de Pagos Interbancarios y a Cuentas en Banco Corpbanca</a></li>
+                    <li><a href="#pagos-electronicos-pagos-informacion-cliente-detalle-nomina" data-transition="none">Detalle de Pagos de Nómina</a></li>
+                    <li><a href="#pagos-electronicos-pagos-informacion-cliente-detalle-facturas" data-transition="none">Detalle de Pagos de Facturas</a></li>
+                    <li><a href="#pagos-electronicos-pagos-informacion-cliente-movimiento-cuenta" data-transition="none">Movimiento de Cuenta</a></li>
+                 </ul>
+         </li>
+    </ul>
+    
+    <style>
+    .km-ios  .km-content {
+        background: url(../../content/shared/images/patterns/pattern2.png);
+        box-shadow: inset 0 0 30px #95764D;
+        -webkit-box-shadow: inset 0 0 30px #95764D;
+    }
+    .km-ios  .km-listview .km-list {
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        box-shadow: 0 1px 5px #95764D;
+        -webkit-box-shadow: 0 1px 5px #95764D;
+    }
+    .km-ios  .km-listview .km-list > li {
+        border: none;
+    }
+    .km-ios  .km-listview .km-list > li:last-child {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    .km-ios  .km-navbar {
+        background: url(../../content/shared/images/patterns/pattern9.png);
+    }
+    .km-tablet .km-ios  .km-view-title {
+        color: #fff;
+        text-shadow: 0 -1px rgba(0,0,0,.5);
+    }
+    .km-ios  .km-navbar .km-button
+    {
+        background-color: #974d2e;
+    }
+
+</style>
+    
+</div>
+
+
+
+<div 
+     id="pagos-electronicos-pagos-interbancarios-caracteristicas"
+     data-role="view"    
+     data-title="Caracteristicas"
+     data-layout="tabstrip-layout">
+
+
+    <h2>
+        Caracteristicas
+    </h2>
+    
+
+    <div class="region region-content">
+  	   <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><ul><li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Los pagos se envían a través de las cámaras de compensación interbancaria ACH y CENIT.</span></span></li>
+<li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Solo se pueden realizar operaciones de pagos en días hábiles.</span></span></li>
+<li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Los horarios de envío y aplicación de los pagos están definidos bajos los ciclos de compensación de las cámaras, como aparece a continuación:</span></span></li>
+</ul><table border="1" cellpadding="1" cellspacing="1"><tbody><tr><th colspan="3" scope="col"><span style="color:#666666"><span style="font-size:16px"><strong>CICLOS CÁMARA DE COMPENSACIÓN INTERBANCARIA ACH</strong></span></span></th>
+</tr><tr><td><span style="color:#666666"><span style="font-size:16px"><strong>CICLO</strong></span></span></td>
+<td><span style="color:#666666"><span style="font-size:16px"><strong>CIERRE DE CICLO EN B. CORPBANCA</strong></span></span></td>
+<td><span style="color:#666666"><span style="font-size:16px"><strong>ENTREGA DE PAGOS BANCO DESTINO</strong></span></span></td>
+</tr><tr><td><span style="font-size:16px">1</span></td>
+<td><span style="font-size:16px">08:30 a.m</span></td>
+<td><span style="font-size:16px">10:00 a.m. - 10:30 a.m.</span></td>
+</tr><tr><td><span style="font-size:16px">2</span></td>
+<td><span style="font-size:16px">11:00 a.m</span></td>
+<td><span style="font-size:16px">12:30 p.m. - 01:00 p.m</span></td>
+</tr><tr><td><span style="font-size:16px">3</span></td>
+<td><span style="font-size:16px">01:30 p.m</span></td>
+<td><span style="font-size:16px">03:00 p.m. - 03:30 p.m</span></td>
+</tr><tr><td><span style="font-size:16px">4</span></td>
+<td><span style="font-size:16px">03:30 p.m</span></td>
+<td><span style="font-size:16px">05:00 p.m. - 05:30 p.m</span></td>
+</tr><tr><td><span style="font-size:16px">**5</span></td>
+<td><span style="font-size:16px">05:30 p.m</span></td>
+<td>&nbsp;</td>
+</tr></tbody></table><p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">* La aplicación de los pagos se realiza el mismo día en que se originan, teniendo en cuenta los horarios de los ciclos definidos en el acuerdo interbancario.</span></span></p>
+<p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">** Transacciones Ciclo 5:</span></span></p>
+<ul><li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Si el cliente requiere realizar transacciones en el Ciclo 5, debe informar previamente al Banco para que estas sean procesadas el mismo día.</span></span></li>
+<li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Todas las transacciones que cursen en el Ciclo 5 tiene una multa definida por la cámara de compensación:</span></span>
+<ul><li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Ejemplo:</span></span><br><table border="1" cellpadding="1" cellspacing="1"><tbody><tr><td><span style="font-size:16px">MONTO</span></td>
+<td><span style="font-size:16px">$100.000.000,00</span></td>
+</tr><tr><td><span style="font-size:16px">Tasa Interbancaria</span></td>
+<td><span style="font-size:16px">0,01289149 % - Aplica para el año 2013</span></td>
+</tr><tr><td><span style="font-size:16px">Valor Sanción</span></td>
+<td><span style="font-size:16px">$12.891,49</span></td>
+</tr></tbody></table></li>
+</ul></li>
+<li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Si la transacción se realiza el día viernes o antes de un día no hábil, el valor de la sanción se multiplica por el número de días que anticipa la operación.</span></span>
+<ul><li>
+<div><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Ejemplo:</span></span></div>
+<div>
+<table border="1" cellpadding="1" cellspacing="1"><tbody><tr><td><span style="font-size:16px">MONTO</span></td>
+<td><span style="font-size:16px">$100.000.000,00</span></td>
+</tr><tr><td><span style="font-size:16px">Tasa Interbancaria</span></td>
+<td><span style="font-size:16px">0,01289149 % - Aplica para el año 2013</span></td>
+</tr><tr><td><span style="font-size:16px">Valor Sanción</span></td>
+<td><span style="font-size:16px">$12.891,49</span></td>
+</tr><tr><td><span style="font-size:16px">Días</span></td>
+<td><span style="font-size:16px">3</span></td>
+</tr><tr><td><span style="font-size:16px">TOTAL</span></td>
+<td><span style="font-size:16px">$38.674,47</span></td>
+</tr></tbody></table></div>
+</li>
+</ul></li>
+<li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El monto máximo permitido por transacción, desde la misma cuenta origen hacia la misma cuenta destino el mismo día es de $20.280.000.000.</span></span></li>
+<li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Para enviar valores superiores a $20.280.000.000 hasta $57.200.000.000, el Gerente de Cuenta se debe comunicar con el área de operaciones (Operación ACH), quien a su vez debe gestionar la autorización ante ACH.</span></span></li>
+<li>
+<p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El cliente puede realizar transferencias sin restricción de monto, desde la misma cuenta origen a diferentes cuentas destino, teniendo en cuenta el límite establecido en el punto anterior.</span></span></p>
+</li>
+<li>
+<p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El modulo de pagos permite al cliente programar las operaciones para realizarse en horas y fechas futuras, hasta 5 meses máximo.</span></span></p>
+</li>
+<li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Azulnet ofrece el servicio de notificación Email Beneficiarios ACH, de tal forma que el cliente puede registrar los correos electrónicos para notificar a cada beneficiario, sobre cada pago que se envíe a través de esta línea de pago.</span></span></li>
+<li>
+<p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El producto ofrece al cliente las siguientes alternativas para la realización del cargo en la cuenta que origina los abonos (pagos):</span></span></p>
+<ul><li>
+<p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><span style="color:#666666"><strong>Débito detallado:</strong></span> En los movimientos de la cuenta aparecerá un registro por el valor de cada uno de los abonos realizados.</span></span></p>
+</li>
+<li>
+<p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><span style="color:#666666"><strong>Débito consolidado:</strong></span> En los movimientos de la cuenta aparecerá un registro por el valor total de los abonos realizados por archivo.</span></span></p>
+</li>
+</ul></li>
+<li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El proceso de pago se puede realizar ingresado la información del pago uno a uno ó a través del cargue de un archivo plano. Para el cargue del archivo plano ver la estructura:</span></span></li>
+</ul><p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><strong><span style="color:#666666">Anexo 2:</span> <a href="/sites/default/files/anexos/pagoselectronicos/Anexo%202%20Formato%20Plantilla%20Cr%E9dito%20Operaci%F3n%20ACH.pdf" target="_blank">Formato Plantilla Crédito Operación ACH</a></strong></span></span></p>
+</div></div></div>  </div>
+</div>
+        
+</div>
+
+
+<div 
+     id="pagos-electronicos-pagos-cuentas-caracteristicas"
+     data-role="view"    
+     data-title="Caracteristicas"
+     data-layout="tabstrip-layout">
+
+
+    <h2>
+        Caracteristicas
+    </h2>
+    
+	<div class="field-item even" property="content:encoded"><ul><li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Solo se pueden realizar operaciones de pagos en días hábiles.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El horario de aplicación del abono en la cuenta destino es cada hora.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Los pagos que se realizan después de las 6:00 p.m. quedan aplicados en la cuenta destino el siguiente día hábil.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El producto ofrece al cliente las siguientes alternativas para la realización del cargo en la cuenta que origina los abonos (pagos):</span></span>
+    <ul><li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><span style="color:#666666"><strong>Débito detallado:</strong> </span>En los movimientos de la cuenta aparecerá un registro por el valor de cada uno de los abonos realizados.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><span style="color:#666666"><strong>Débito consolidado:</strong></span> En los movimientos de la cuenta aparecerá un registro por el valor total de los abonos realizados por archivo.</span></span></li>
+    </ul></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El proceso de pago se puede realizar ingresado la información del pago uno a uno ó a través del cargue de un archivo plano utilizando la misma estructura de los pagos interbancarios.</span></span></li>
+    </ul><p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><strong><span style="color:#666666">Ver Anexo 2:</span> <a href="/sites/default/files/anexos/pagoselectronicos/Anexo%202%20Formato%20Plantilla%20Cr%E9dito%20Operaci%F3n%20ACH.pdf" target="_blank">Formato Plantilla Crédito Operación ACH</a></strong></span></span></p>
+    </div>
+        
+</div>
+
+<div 
+     id="pagos-electronicos-pagos-nomina-caracteristicas"
+     data-role="view"    
+     data-title="Caracteristicas"
+     data-layout="tabstrip-layout">
+
+
+    <h2>
+        Caracteristicas
+    </h2>   
+
+    
+    <div class="field-item even" property="content:encoded"><ul><li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El cliente previamente a la primera dispersión debe haber firmado el convenio de nómina con el Banco CorpBanca.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El módulo de pago de nómina permite realizar pagos los 7 días de la semana, 24 horas del día.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El módulo permite al cliente realizar los pagos en línea o programar las operaciones para realizarse en horas y fechas futuras (hasta 5 meses).</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El proceso de pago se puede realizar ingresado la información del pago uno a uno o a través del cargue de un archivo plano. Para el cargue del archivo plano ver la estructura: <strong><span style="color:#666666">Anexo 3: </span><a href="/sites/default/files/anexos/pagoselectronicos/Anexo%203%20Formato%20Plantilla%20N%F3mina%20Corpbanca.pdf" target="_blank">Formato Nómina Corpbanca</a>.</strong></span></span></li>
+    </ul></div>
+        
+</div>
+
+
+<div 
+     id="pagos-electronicos-pagos-facturas-caracteristicas"
+     data-role="view"    
+     data-title="Caracteristicas"
+     data-layout="tabstrip-layout">
+
+
+    <h2>
+        Caracteristicas
+    </h2>
+    
+    <div class="field-item even" property="content:encoded"><ul><li>Los pagos se pueden realizar las 24 horas, 7 días a la semana. Sin embargo, la aplicación del pago depende de las condiciones pactadas en el convenio.</li>
+    <li>Los pagos son confirmados y debitados de la cuenta originadora en línea.</li>
+    <li>El cliente puede realizar el pago de las facturas únicamente de las empresas de servicios públicos o privados que se encuentran disponibles en Azulnet.</li>
+    </ul></div>
+        
+</div>
+
+<div 
+     id="pagos-electronicos-pagos-informacion-cliente-consulta"
+     data-role="view"    
+     data-title="Historial"
+     data-layout="tabstrip-layout">
+
+
+    <h2>
+        Consulta de Historial
+    </h2>
+    
+    <div class="field-item even" property="content:encoded"><ul><li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El cliente puede consultar la información de los pagos realizados y el estado de cada uno de manera individual.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Todas las líneas de pago pueden ser consultadas a través de esta opción.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Puede ser realizada hasta 9 meses atrás y el usuario que la realice debe tener los privilegios asignados para consultar historial.</span></span></li>
+    </ul></div>
+        
+</div>
+
+<div 
+     id="pagos-electronicos-pagos-informacion-cliente-detalle"
+     data-role="view"    
+     data-title="Detalle de pagos"
+     data-layout="tabstrip-layout">
+
+
+    <h2>
+        Detalle de Pagos Interbancarios y a Cuentas en Banco Corpbanca
+    </h2>
+    
+    <div class="field-item even" property="content:encoded"><p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El resultado de los pagos realizados a terceros, en Banco Corpbanca o en otros Bancos del país, aparece en la consulta de Historial de Pagos en Azulnet identificado como “Operación ACH”. Cuando el cliente hace clic en cada registro de la transacción (primera columna), puede acceder al detalle de cada operación.&nbsp;</span></span></p>
+	</div>    
+        
+</div>
+
+<div 
+     id="pagos-electronicos-pagos-informacion-cliente-detalle-nomina"
+     data-role="view"    
+     data-title="Detalle"
+     data-layout="tabstrip-layout">
+
+
+    <h2>
+        Detalle de Pagos de Nómina
+    </h2>
+    
+    <div class="field-item even" property="content:encoded"><p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El resultado de los pagos de nómina realizados, aparece en la consulta de Historial de Pagos en Azulnet identificado como “Pago de Nómina”. Cuando el cliente hace clic en cada transacción (primera columna), puede acceder al detalle de cada operación.&nbsp;</span></span></p>
+	</div>
+        
+</div>
+
+<div 
+     id="pagos-electronicos-pagos-informacion-cliente-detalle-facturas"
+     data-role="view"    
+     data-title="Detalle"
+     data-layout="tabstrip-layout">
+
+
+    <h2>
+        Detalle de Pagos de Facturas
+    </h2>
+    
+    <div class="field-item even" property="content:encoded"><p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El resultado de los pagos de facturas realizados, aparece en la consulta de Historial de Pagos en Azulnet identificado como “Pago de Facturas”. Cuando el cliente hace clic en cada transacción (primera columna), puede acceder al detalle de cada operación.</span></span></p>
+	</div>
+        
+</div>
+
+
+<div 
+     id="pagos-electronicos-pagos-informacion-cliente-movimiento-cuenta"
+     data-role="view"    
+     data-title="Movimiento"
+     data-layout="tabstrip-layout">
+
+
+    <h2>
+        Movimiento de Cuenta
+    </h2>
+    
+    <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">En la consulta de movimientos de Azulnet, el cliente puede consultar los débitos que se hayan hecho por concepto de pagos, identificados con las siguientes descripciones:</span></span></p>
+    <table border="1" cellpadding="1" cellspacing="1"><tbody><tr><td><span style="font-size:16px">Operación ACH:</span></td>
+    <td><span style="font-size:16px">ND. OPERACION ACH OTROS BANCOS</span></td>
+    </tr><tr><td><span style="font-size:16px">Operación a Banco Corpbanca:&nbsp;</span></td>
+    <td>
+    <p><span style="font-size:16px">ND. OPERAC ACH CLIENTES CORPBANCA</span></p>
+    </td>
+    </tr><tr><td><span style="font-size:16px">Pago de Nómina:&nbsp;</span></td>
+    <td>
+    <p><span style="font-size:16px">PAGO NOMINA AZUL NET EMPRESAS</span></p>
+    </td>
+    </tr><tr><td><span style="font-size:16px">Pago con PSE:&nbsp;</span></td>
+    <td>
+    <p><span style="font-size:16px">ND COMPRAS YO PAGOS POR AZUL NET</span></p>
+    </td>
+    </tr><tr><td><span style="font-size:16px">Pago de Facturas:&nbsp; &nbsp;</span></td>
+    <td>
+    <p><span style="font-size:16px">CGO CTA PAGO</span></p>
+    <p><span style="font-size:16px">ND RECAUDOS CON CARGO A CTA</span></p>
+    <p><span style="font-size:16px">ND PAGO SERVICIOS AZUL NET</span></p>
+    <p><span style="font-size:16px">ND PAGO GAS AZULNET</span></p>
+    <p><span style="font-size:16px">ND PAGO IMPUESTO AZULNET</span></p>
+    <p><span style="font-size:16px">ND PAGO TELEFONIA MOVIL AZUL NET</span></p>
+    <p><span style="font-size:16px">ND PAGO TELEVISION AZUL NET</span></p>
+    <p><span style="font-size:16px">ND PAGO FACTURA POR AZUL NET</span></p>
+    </td>
+    </tr></tbody></table><p>&nbsp;</p>
+    </div></div></div>  </div>
+        
+</div>
+

@@ -113,6 +113,50 @@ define([
                      window.kendoApp.navigate("scripts/app/vistas/pagos/cheques/Tarifas.html");
                  })
      }
+     
+     function cuentasConcentradora(){
+         $('#cuentas-concentradora-definicion').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/cuentas/concentradora/Definicion.html");
+                 })
+                 
+                 $('#cuentas-concentradora-modalidades').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/cuentas/concentradora/Modalidades.html");
+                 })
+                 
+                 $('#cuentas-concentradora-argumentos').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/cuentas/concentradora/Argumentos.html");
+                 })
+                 
+                 $('#cuentas-concentradora-implementacion').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/cuentas/concentradora/Funcionamiento.html");
+                 })
+                  
+                 $('#cuentas-concentradora-tarifas').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/cuentas/concentradora/Tarifas.html");
+                 })
+     }
+     
+     function azul(){
+         $('#azul-definicion').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/azul/Definicion.html");
+                 })
+                 
+                 $('#azul-modalidades').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/azul/Modalidades.html");
+                 })
+                 
+                 $('#azul-argumentos').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/azul/Argumentos.html");
+                 })
+                 
+                 $('#azul-implementacion').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/azul/Funcionamiento.html");
+                 })
+                  
+                 $('#azul-tarifas').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/azul/Tarifas.html");
+                 })
+     }
 
      return {
          viewModel: {
@@ -122,6 +166,8 @@ define([
                  pagosElectronicos();
                  pagosConfirming();
                  pagosCheques();
+                 cuentasConcentradora();
+                 azul();
              },
              login: function login() {
                  var login = app.login_view.viewModel;    

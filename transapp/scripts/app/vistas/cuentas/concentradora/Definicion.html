@@ -1,0 +1,132 @@
+   
+<div data-role="view"
+     data-model="app.recaudoReferenciado.viewModel"
+     data-init="app.recaudoReferenciado.viewModel.loaded"
+     data-title="Pagos electronicos"
+     data-layout="tabstrip-layout">
+
+
+    <div class="titanic_a">&nbsp;</div>
+
+    <h2>Definicion</h2>
+    
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Servicio diseñado para centralizar el manejo de recursos de dos o más cuentas de forma automática. Permite al cliente consolidar en una sola cuenta o distribuir desde una cuenta o varias cuentas los excesos de liquidez de cada día y cubrir automáticamente eventuales sobregiros, permitiéndole empezar cada día en cada una de las cuentas dependientes con saldos efectivos o disponibles determinados.</span></span></p>
+	</div></div></div>
+    
+    <h2>Caracteristicas</h2>
+    
+    <h3>Cuenta Concentradora</h3>    
+    
+    <div class="field-item even" property="content:encoded"><ul><li>Su función es la administración de los recursos, de acuerdo a las condiciones definidas por el cliente, en cuanto a la centralización o dispersión desde o hacia las cuentas centralizadoras o hijas.</li>
+    </ul><ul><li>La dispersión puede hacerse sobre:
+    <ul><li>Saldos disponibles.</li>
+    <li>Contra cupo de sobregiro.</li>
+    <li>Saldo en canje o remesas que hayan sido aprobados previamente dentro de la línea de crédito del cliente. Si el cheque sale devuelto en el proceso de canje al segundo día se reversa el proceso realizado.</li>
+    </ul></li>
+    </ul><ul><li>Solo puede haber una Cuenta Madre.</li>
+    </ul></div>
+    
+    <h3>Cuenta Descentralizadora</h3>
+    
+    <div class="field-item even" property="content:encoded"><ul><li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Es la cuenta que se asocia a la Cuenta Madre, para que se realicen los débitos o créditos, de acuerdo a la condición establecida para cada cuenta.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">La dispersión puede hacerse sobre:</span></span>
+    <ul><li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Saldos disponibles.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Contra cupo de sobregiro.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Saldo en canje o remesas que hayan sido aprobados previamente dentro de la línea de crédito del cliente. Si el cheque sale devuelto en el proceso de canje al segundo día se reversa el proceso realizado.</span></span></li>
+    </ul></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Una Cuenta Hija, sólo puede estar asociada a una Cuenta Madre.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Una Cuenta Hija, no puede ser Cuenta Madre a la vez.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Una cuenta Hija, no puede tener asociada otra Cuenta Hija a la vez, es decir que solo permite un nivel concentración.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Las Cuentas Hijas, pueden ser del mismo o de diferente titular.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Las Cuentas Hijas solo pueden ser Cuentas de Banco Corpbanca.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El producto permite que se asocie a la Cuenta Madre tantas Cuentas Hijas como requiera el cliente.</span></span></li>
+    </ul></div>
+    
+    <h3>
+        Condiciones del Traslado
+    </h3>
+    
+    <div class="field-item even" property="content:encoded"><p>El proceso de traslado (Concentración y Dispersión) tiene dos condiciones o formas que se pueden parametrizar para que realice las operaciones:</p>
+    <ul><li><strong>Total: </strong>Si la prioridad es mantener el saldo definido (Saldo Determinado) por el cliente, al final de día y después de realizar el proceso de concentración quedan cuentas sobregiradas, este proceso se deshace, quedando la Cuenta Madre y las Cuentas Hijas con los saldos iniciales.</li>
+    <li><strong>Parcial:</strong> Esta opción permite que se cubran los saldos determinados hasta que no hayan más fondos, por lo que pueden quedar cuentas en sobregiro.</li>
+    </ul></div>
+    
+    <h3>
+        Prioridad del Traslado
+    </h3>
+    
+    <div class="field-item even" property="content:encoded"><p>El producto permite definir las prioridades de los traslados según los saldos que se definan para cada cuenta o para cubrir cuentas que estén sobregiradas.</p>
+    <ul><li><strong>Saldo Determinado:</strong> Cada Cuenta Hija traspasará a la Cuenta Madre los fondos que le sobren hasta quedarse con el saldo determinado.</li>
+    <li><strong>Cubrir Sobregiro:</strong> Las Cuentas Hijas renunciarán a su saldo determinado de forma parcial o total, para cubrir el sobregiro de la Cuenta Madre o de otras Cuentas Hijas que estén asociadas.</li>
+    </ul></div>
+    
+    <h3>
+        Parámetros
+    </h3>
+    
+    <div class="field-item even" property="content:encoded"><p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Estos son los parámetros que se deben tener en cuenta para el proceso de parametrización de las Cuentas Madres e Hijas.</span></span></p>
+    <ul><li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><span style="color:#666666"><strong>Saldo Determinado:</strong></span> Son los saldos que el cliente desea queden en las Cuentas Hijas tras el proceso de traspasos. <span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">El Saldo Determinado para las Cuentas Hijas será siempre positivo o cero.</span></span></span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><span style="color:#666666"><strong>Monto Máximo Dispersión: </strong></span>Es el monto máximo que se traspasará de una Cuenta Madre a las Cuentas Hijas o viceversa.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><span style="color:#666666"><strong>Monto Mínimo de Traspaso: </strong></span>Es el monto mínimo que se traspasa de una Cuenta Madre a las Cuentas Hijas o viceversa. Si el valor del traspaso es menor al monto no se realiza el traspaso.</span></span> <span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Si el valor del traspaso es menor al valor de la comisión del traspaso, no se realiza la operación.</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><span style="color:#666666"><strong>Dirección del Traspaso por Cuenta Hija: </strong></span>Concentración, Dispersión o Ambos.</span></span>
+    <ul><li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">“C” solo admite traspasos de Concentración</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">“D” solo admite traspasos de Dispersión</span></span></li>
+    <li><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">“A” Admite ambos traspasos</span></span></li>
+    </ul></li>
+    </ul></div>
+
+<style scoped>
+    .titanic_a, .titanic_b, .titanic_c {
+        display: block;
+        height: 230px;
+        background: url(http://www.transappcional.com.co/sites/default/files/Cuenta%20Concentradora.jpg) no-repeat center center;
+        -webkit-background-size: 100% auto;
+        background-size: 100% auto;
+    }
+
+    .titanic_b {
+        background: url(../../content/mobile/shared/titanic2.jpg) no-repeat center center;
+    }
+    
+    .titanic_c {
+        background: url(../../content/mobile/shared/titanic3.jpg) no-repeat center center;
+    }
+
+    #scroller-view h2{
+        margin: 15px 10px 0 10px;
+    }
+
+    #scroller-view img {
+        -webkit-transform: translatez(0);
+    }
+
+    #scroller-view .scroller-content {
+        font-weight: normal;
+        height: 130px;
+        margin: 15px 0;
+        background-color: rgba(0, 0, 0, 0.07);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.45) inset;
+    }
+    
+    .km-ios #scroller-view .km-navbar {
+        background: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0, rgba(255, 255, 255, 0.5)), color-stop(0.06, rgba(255, 255, 255, 0.45)), color-stop(0.5, rgba(255, 255, 255, 0.2)), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(1, rgba(100, 100, 100, 0))), url(../../content/shared/images/patterns/pattern9.png);
+        background: -moz-linear-gradient(center top , rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.45) 6%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(100, 100, 100, 0)), url(../../content/shared/images/patterns/pattern9.png);
+	}
+	.km-tablet .km-ios #scroller-view .km-view-title {
+        color: #fff;
+        text-shadow: 0 -1px rgba(0,0,0,.5);
+    }
+    
+    .km-ios #scroller-view .km-navbar .km-button {
+        background-color: rgba(0,0,0,0.2);
+    }
+</style>
+    
+</div>
+
+
+    
+
+
+    
+   
