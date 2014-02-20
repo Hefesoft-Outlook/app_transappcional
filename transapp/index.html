@@ -3,7 +3,8 @@
 <head>
     <title></title>
     <meta charset="utf-8" />
-    <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+     <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />  
+     <!--<link href="kendo/styles/20133/kendo.mobile.all.min.css" rel="stylesheet" /> -->
     <link href="styles/main.css" rel="stylesheet" />
 
     <script src="cordova.js"></script>
@@ -17,7 +18,7 @@
         <ul data-role="listview" data-type="group">        
         <li>Indicadores
             <ul>
-                <li><a data-icon="more" id="indicadores" data-transition="none">Todas las cifras</a></li>
+                <li><a data-icon="more" id="indicadores" data-transition="slide">Todas las cifras</a></li>
             </ul>
         </li>
         <li>Recaudo referenciado
@@ -143,12 +144,13 @@
          data-layout="tabstrip-layout"
          data-role="view" data-model="app.login_view.viewModel" data-init="app.login_view.viewModel.loaded"
          data-title="Login">
-        <div class="view-content">
+        
+        <div class="view-content" data-role="scroller" class="scroller-content">
             <div class="logo"></div>
 
-            <h3 data-bind="invisible: isLoggedIn">Enter your credentials:</h3>
+            <h3 data-bind="invisible: isLoggedIn">Inicio de sesión:</h3>
             <h1 class="welcome" data-bind="visible: isLoggedIn">
-                Welcome, <span data-bind="text: username"></span>!
+                Bienvenido, <span data-bind="text: username"></span>!
             </h1>
             <div class="buttonArea">
                 <input type="submit" id="logout" data-role="button" data-bind="click: onLogout, visible: isLoggedIn" class="login-button" value="Logout" />
@@ -157,13 +159,13 @@
                 <ul data-role="listview" data-style="inset">
                     <li>
                         <label>
-                            Username
+                            Usuario de red
                             <input type="text" data-bind="value: Usuario_Entidad.usuario" />
                         </label>
                     </li>
                     <li>
                         <label>
-                            Password
+                            Contraseña
                             <input type="password" data-bind="value: Usuario_Entidad.password" />
                         </label>
                     </li>
