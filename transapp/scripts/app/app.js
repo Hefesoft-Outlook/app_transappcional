@@ -24,8 +24,19 @@ function ($, kendo, azure, q, utils, login_view, recaudoReferenciado) {
         var init = function () {
             window.onerror = _onError;
 			
+            var os = kendo.support.mobileOS,  
+            statusBarStyle = os.ios && os.flatVersion >= 700 ? "black-translucent" : "black";  
+            
             //Variables globales
-            window.kendoApp = new kendo.mobile.Application(document.body, { layout: "tabstrip-layout" });
+            window.kendoApp = new kendo.mobile.Application(document.body, { layout: "tabstrip-layout",  statusBarStyle: statusBarStyle });
+            
+            document.addEventListener("orientationchange", fixViewResize);
+
+            document.addEventListener('deviceready', function () {
+              navigator.splashscreen.hide();
+                fixViewResize();
+              }, false);
+            
             
             //window.convertirDatosExtra = convertirDatosExtra;
             //window.mapearNombres = convertirDatosExtra;
@@ -53,6 +64,15 @@ function ($, kendo, azure, q, utils, login_view, recaudoReferenciado) {
             recaudoReferenciado : recaudoReferenciado
         };
 
+    
+    	function fixViewResize() {
+          if (device.platform === "iOS" || device.platform === "Android") {
+              setTimeout(function() {
+                 $(document.body).height(window.innerHeight);
+              }, 10);
+          }
+        };
+    
         function convertirDatosExtra(resultado) {
             for (var i in resultado) {
                 try {

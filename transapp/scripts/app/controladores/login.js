@@ -166,6 +166,12 @@ define([
 
      return {
          viewModel: {
+             onHide : function(){
+                 $("#my-drawer").css('opacity', '0');               
+             },
+             before: function(){
+                 $("#my-drawer").css('opacity', '1');
+             },
              loaded: function loaded() {                  
                  recaudoReferenciado();
                  recaudoTransporte();
