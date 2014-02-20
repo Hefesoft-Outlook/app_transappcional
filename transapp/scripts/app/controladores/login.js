@@ -157,6 +157,12 @@ define([
                      window.kendoApp.navigate("scripts/app/vistas/azul/Tarifas.html");
                  })
      }
+     
+     function indicadores(){
+         $('#indicadores').on("click", function () {
+                     window.kendoApp.navigate("scripts/app/vistas/indicadores/indicadores.html");
+                 })
+     }
 
      return {
          viewModel: {
@@ -168,6 +174,7 @@ define([
                  pagosCheques();
                  cuentasConcentradora();
                  azul();
+                 indicadores();
              },
              login: function login() {
                  var login = app.login_view.viewModel;    
